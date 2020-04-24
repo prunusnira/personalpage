@@ -1,0 +1,18 @@
+.color-land {
+    background: linear-gradient(
+        rgb(30, 35, 41), 
+        rgb(30, 35, 41), 
+        rgba(0, 0, 0, 0.3),
+        rgb(30, 35, 41), 
+        rgb(30, 35, 41)
+        ),
+        url('./back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+}
+
+.arrow-down-size {
+    font-size: 250%;
+}

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "SquarePlus";
+  font-style: "normal";
+  src: local("SquarePlus"),
+      url("./file/SquarePlusR.woff2") format("woff2"),
+      url("./file/SquarePlus.woff") format("woff"),
+      url("./file/SquarePlusR.ttf") format("truetype");
+}
+
+body {
+  padding-top: 56px;
+}
+
+html, body, #root {
+  height: calc(100vh - 56px);
+  font-family: "SquarePlus";
+}

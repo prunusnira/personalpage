@@ -1,0 +1,48 @@
+.h100 {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.text {
+    .lv1 {
+        font-size: 3.5rem;
+    }
+
+    .lv2 {
+        font-size: 1.5rem;
+    }
+
+    .lv3 {
+        font-size: 1rem;
+    }
+}
+
+.paragraph {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.horizondiv {
+    white-space: nowrap;
+}
+
+.proj-shell {
+    display: table;
+    height: 100%;
+}
+
+.proj-cover {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.proj-movebtn {
+    color: green;
+}
+
+.card {
+    color: black;
+}
