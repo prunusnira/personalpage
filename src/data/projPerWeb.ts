@@ -26,7 +26,7 @@ const projPerWeb = [
             "en":``
         },
         image: [
-            "", ""
+            "/projPerWeb/sin/01.jpg", "/projPerWeb/sin/02.jpg"
         ]
     },
     {
@@ -53,7 +53,7 @@ const projPerWeb = [
             "en":""
         },
         image: [
-            "", ""
+            "/projPerWeb/piu/01.jpg", ""
         ]
     }
 ];

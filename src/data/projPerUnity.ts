@@ -23,7 +23,7 @@ const projPerUnity = [
             "en":""
         },
         image: [
-            "", ""
+            "/projPerUnity/rhythm/01.jpg", "/projPerUnity/rhythm/02.jpg", "/projPerUnity/rhythm/03.jpg"
         ]
     }
 ];

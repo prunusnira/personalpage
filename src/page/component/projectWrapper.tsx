@@ -38,7 +38,7 @@ class ProjectWrapper extends Component<Props> {
                                         else {
                                             return (
                                                 <div className="proj-cover">
-                                                    <Button style={self.btnStyle} className="proj-movebtn" onClick={() => self.props.moveProject(false)}>
+                                                    <Button style={self.btnStyle} onClick={() => self.props.moveProject(false)}>
                                                         <FontAwesomeIcon icon={faChevronLeft} />
                                                     </Button>
                                                 </div>

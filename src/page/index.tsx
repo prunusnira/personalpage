@@ -4,7 +4,7 @@ import {Container} from 'reactstrap';
 import Landing from './landing/landing';
 import FixedTop from './fixedTop';
 import FixedBottom from './fixedBottom';
-import About from './profile/about';
+import About from './profile/profile';
 import ProjectPage from './project/project';
 import Experience from './experience';
 

@@ -16,14 +16,14 @@ class About extends Component {
                     <Col xs="12">
                         <Row className="paragraph">
                             <ReactWOW animation="slideInLeft">
-                                <Col className="text" xs="12">
+                                <Col className="text text-center" xs="12">
                                     <span className="lv1">Profile</span>
                                 </Col>
                             </ReactWOW>
                         </Row>
                         <Row className="paragraph">
                             <ReactWOW animation="slideInLeft">
-                                <Col className="text" xs="12">
+                                <Col className="text text-center" xs="12">
                                     <span className="lv2">{(textAbout.para1t as any)[this.lang]}</span><br/>
                                     <span className="lv3">{(textAbout.para1c as any)[this.lang]}</span>
                                 </Col>

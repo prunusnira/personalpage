@@ -16,7 +16,7 @@ const textAbout = {
     },
     para3t: {
         "ko":"일 해본 경험",
-        "jp":"",
+        "jp":"お仕事の経験",
         "en":"Work Experiences"
     },
     para3c1: {

@@ -1,59 +1,58 @@
 const projWorkWeb = [
     {
         title: {
-            "ko":"벨소리 관리자",
-            "jp":"Ringtone Manager",
-            "en":"Ringtone Manager"
+            "ko":"인증서 채팅 봇",
+            "jp":"",
+            "en":""
         },
-        platform: "Android (Under 7)",
-        tech: "Android (Java), SQLite",
-        period: "2011~2012",
-        link1: "https://play.google.com/store/apps/details?id=com.ring.roxyeris",
-        link2: "https://github.com/prunusnira/ringtone-public",
+        platform: "Android / Web",
+        tech: "Android (Kotlin), ReactJS, Spring Boot 2, MariaDB",
+        period: "2019.12-2020.05",
+        link1: "https://play.google.com/store/apps/details?id=com.crosscert.aichat",
+        link2: "https://chatapp.crosscert.com",
         link3: "",
         content: {
-            "ko":"- 기기의 전화가 한 번 올 때마다 벨소리를 랜덤으로 바꿔주는 앱<br/>\
-                    - 착신 상태를 확인하여 상태 변경에 따라 시스템 옵션을 변경<br/>\
-                    - Disclaimer: 8~9년 전에 작성된 앱으로 현재 안드로이드 버전과는 맞지 않음<br/>\
-                    - 14000+ 다운로드, 3.85 평점",
+            "ko":`인증서 서비스를 사용하는 이용자들이 자주하는 질문 등을 채팅봇 형태로 만들어 둔 서비스
+            향후 카카오톡 채널 연동, SSL인증서에 대한 채팅봇 추가 등이 예정되어 있다`,
             "jp":"",
             "en":""
         },
         dev: {
-            "ko":"- Android 내부의 Telephony Manager로 착신 상태 확인<br/>\
-                    - SQLite를 사용해 등록된 곡 관리",
+            "ko":``,
             "jp":"",
             "en":""
         },
         image: [
-            "", ""
+            "/projWorkWeb/chatbot/01.jpg", "/projWorkWeb/chatbot/02.jpg",
+            "/projWorkWeb/chatbot/03.jpg", "/projWorkWeb/chatbot/04.jpg"
         ]
     },
+
     {
         title: {
-            "ko":"Drawing Launcher",
-            "jp":"Drawing Launcher",
-            "en":"Drawing Launcher"
+            "ko":"인증서 클라우드 백업 서비스",
+            "jp":"",
+            "en":""
         },
-        platform: "Android",
-        tech: "Android (Java)",
-        period: "2016.08~2017.04",
-        link1: "https://play.google.com/store/apps/details?id=com.roxyeris.drawinglauncher",
-        link2: "hthttps://github.com/prunusnira/DrawingLauncher",
+        platform: "Web",
+        tech: "Spring Boot 2 (Java), PostgreSQL",
+        period: "2020.01-2020.05",
+        link1: "",
+        link2: "",
         link3: "",
         content: {
-            "ko":"- 제스처를 그려서 사용하는 앱 런처<br/>\
-                    - 개인 사용을 상정하고 만들었음",
+            "ko":`인증서 서비스를 사용하는 이용자들이 자주하는 질문 등을 채팅봇 형태로 만들어 둔 서비스
+            향후 카카오톡 채널 연동, SSL인증서에 대한 채팅봇 추가 등이 예정되어 있다`,
             "jp":"",
             "en":""
         },
         dev: {
-            "ko":"Android의 Gesture, Gesture Store를 사용하여 개발",
+            "ko":``,
             "jp":"",
             "en":""
         },
         image: [
-            "", ""
+            
         ]
     }
 ];

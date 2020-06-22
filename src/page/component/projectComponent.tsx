@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Col, Row, Card, CardHeader, CardBody } from "reactstrap";
 import textProject from "../../text/project";
 import Language from "../../tool/language";
+import "./projectComponent.scss";
 
 interface Props {
     title: string,
@@ -65,7 +66,22 @@ class ProjectComponent extends Component<Props> {
                         </Row>
                         <Row className="paragraph">
                             <Col className="text">
-                                <span className="lv3">{/* Image */}</span>
+                                <b>Images</b><br/>
+                                <span className="lv3">Click to open in the new tab</span><br/>
+                                <span className="lv3">
+                                    {
+                                        this.props.image.map((e) => {
+                                            const imgUrl = process.env.PUBLIC_URL+"/img"+e;
+                                            return (
+                                                <a
+                                                    target="_blank"
+                                                    href={imgUrl}>
+                                                    <img className="proj-comp-img" src={imgUrl}/>
+                                                </a>
+                                            )
+                                        })
+                                    }
+                                </span>
                             </Col>
                         </Row>
                     </CardBody>

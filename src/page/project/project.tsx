@@ -53,6 +53,9 @@ class ProjectPage extends Component<{}, State> {
     }
 
     loadProjectList(moduleName: string) {
+        // 작업 전에 현재 페이지 번호를 초기화
+        this.updateCatNum(0);
+
         let m = null;
         switch(moduleName) {
             case "projPerWeb":
@@ -133,27 +136,27 @@ class ProjectPage extends Component<{}, State> {
                     <Col xs="12">
                         <Row className="paragraph">
                             <ReactWOW animation="slideInLeft">
-                                <Col className="text" xs="12">
+                                <Col className="text text-center" xs="12">
                                     <span className="lv1">Works</span>
                                 </Col>
                             </ReactWOW>
                         </Row>
-                        <Row>
+                        <Row className="text-center">
                             <Col xs="6">
                                 <span className="lv3">
                                     Personal Development
                                 </span><br/>
-                                <Button onClick={() => this.loadProjectList("projPerWeb")}>Web</Button>
-                                <Button onClick={() => this.loadProjectList("projPerAndroid")}>Android</Button>
-                                <Button onClick={() => this.loadProjectList("projPerUnity")}>Unity</Button>
+                                <Button className="btn-category" onClick={() => this.loadProjectList("projPerWeb")}>Web</Button>
+                                <Button className="btn-category" onClick={() => this.loadProjectList("projPerAndroid")}>Android</Button>
+                                <Button className="btn-category" onClick={() => this.loadProjectList("projPerUnity")}>Unity</Button>
                             </Col>
                             <Col xs="6">
                                 <span className="lv3">
                                     Non-Personal Development
                                 </span><br/>
-                                <Button onClick={() => this.loadProjectList("projWorkWeb")}>Web</Button>
-                                <Button onClick={() => this.loadProjectList("projWorkUnity")}>Unity</Button>
-                                <Button onClick={() => this.loadProjectList("projWorkEtc")}>etc</Button>
+                                <Button className="btn-category" onClick={() => this.loadProjectList("projWorkWeb")}>Web</Button>
+                                <Button className="btn-category" onClick={() => this.loadProjectList("projWorkUnity")}>Unity</Button>
+                                <Button className="btn-category" onClick={() => this.loadProjectList("projWorkEtc")}>etc</Button>
                             </Col>
                         </Row>
                         {/** Point로 개수 표시
