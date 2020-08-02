@@ -1,17 +1,17 @@
 import React, { Component, Fragment } from "react";
 import { Col, Row, Button } from "reactstrap";
 import ProjectItem from "../../data/projectItem";
-import ProjectComponent from "./projectComponent"; 
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import ProjectLinearCover from "./projectLinearCover";
 
 interface Props {
     catName: string,
     catSize: number,
     catList: Array<ProjectItem>,
     catCurNum: number,
-    moveProject: (pn: boolean) => void
+    moveProject: (idx: number) => void
 }
 
 class ProjectWrapper extends Component<Props> {
@@ -24,7 +24,6 @@ class ProjectWrapper extends Component<Props> {
     render() {
         const self = this;
         if(this.props.catList.length > 0) {
-            const item = this.props.catList[this.props.catCurNum];
             return (
                 <Fragment>
                     <Row>
@@ -32,52 +31,54 @@ class ProjectWrapper extends Component<Props> {
                             <div className="proj-shell">
                                 {
                                     (function() {
-                                        if(self.props.catCurNum == 0) {
-                                            return null;
+                                        let nextidx: number;
+                                        if(self.props.catCurNum === 0) {
+                                            nextidx = self.props.catSize - 1;
                                         }
                                         else {
-                                            return (
-                                                <div className="proj-cover">
-                                                    <Button style={self.btnStyle} onClick={() => self.props.moveProject(false)}>
-                                                        <FontAwesomeIcon icon={faChevronLeft} />
-                                                    </Button>
-                                                </div>
-                                            )
+                                            nextidx = self.props.catCurNum - 1;
                                         }
+
+                                        return (
+                                            <div className="proj-cover">
+                                                <Button style={self.btnStyle}
+                                                        onClick={() => self.props.moveProject(nextidx)}>
+                                                    <FontAwesomeIcon icon={faChevronLeft} />
+                                                </Button>
+                                            </div>
+                                        )
                                     })()
                                 }
                             </div>
                         </Col>
                         <Col xs="10">
-                            <ProjectComponent
-                                title={item.title}
-                                platform={item.platform}
-                                tech={item.tech}
-                                period={item.period}
-                                link1={item.link1}
-                                link2={item.link2}
-                                link3={item.link3}
-                                content={item.content}
-                                dev={item.dev}
-                                image={item.image}
+                            <ProjectLinearCover
+                                catList={self.props.catList}
+                                catSize={self.props.catSize}
+                                catCurNum={self.props.catCurNum}
+                                moveProject={self.props.moveProject}
                             />
                         </Col>
                         <Col xs="1">
                             <div className="proj-shell">
                                 {
                                     (function() {
-                                        if(self.props.catCurNum == self.props.catSize-1) {
-                                            return null;
+                                        let nextidx: number;
+                                        if(self.props.catCurNum === self.props.catSize - 1) {
+                                            nextidx = 0;
                                         }
                                         else {
-                                            return (
-                                                <div className="proj-cover">
-                                                    <Button style={self.btnStyle} onClick={() => self.props.moveProject(true)}>
-                                                        <FontAwesomeIcon icon={faChevronRight} />
-                                                    </Button>
-                                                </div>
-                                            )
+                                            nextidx = self.props.catCurNum + 1;
                                         }
+
+                                        return (
+                                            <div className="proj-cover">
+                                                <Button style={self.btnStyle}
+                                                        onClick={() => self.props.moveProject(nextidx)}>
+                                                    <FontAwesomeIcon icon={faChevronRight} />
+                                                </Button>
+                                            </div>
+                                        )
                                     })()
                                 }
                             </div>

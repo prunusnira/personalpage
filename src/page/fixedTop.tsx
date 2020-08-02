@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Navbar, NavItem, Nav, Collapse, NavbarBrand, NavbarToggler, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
+import {Navbar, NavItem, Nav, NavbarBrand, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 
 import "./css/navbar.scss";
 import Language from '../tool/language';

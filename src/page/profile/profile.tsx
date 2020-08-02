@@ -15,14 +15,18 @@ class About extends Component {
                 <Row className="h100 color-prof" id="profile">
                     <Col xs="12">
                         <Row className="paragraph">
-                            <ReactWOW animation="slideInLeft">
+                            <ReactWOW
+                                key="profile1"
+                                animation="slideInLeft">
                                 <Col className="text text-center" xs="12">
                                     <span className="lv1">Profile</span>
                                 </Col>
                             </ReactWOW>
                         </Row>
                         <Row className="paragraph">
-                            <ReactWOW animation="slideInLeft">
+                            <ReactWOW
+                                key="profile2"
+                                animation="slideInLeft">
                                 <Col className="text text-center" xs="12">
                                     <span className="lv2">{(textAbout.para1t as any)[this.lang]}</span><br/>
                                     <span className="lv3">{(textAbout.para1c as any)[this.lang]}</span>
@@ -30,7 +34,9 @@ class About extends Component {
                             </ReactWOW>
                         </Row>
                         <Row className="paragraph">
-                            <ReactWOW animation="fadeInDown">
+                            <ReactWOW
+                                key="profile3"
+                                animation="fadeInDown">
                                 <Col className="text" xs="12">
                                     <span className="lv2">{(textAbout.para2t as any)[this.lang]}</span>
                                 </Col>
@@ -40,7 +46,9 @@ class About extends Component {
                             {
                                 techStack.map((d, i) => {
                                     return (
-                                        <ReactWOW animation="slideInLeft">
+                                        <ReactWOW
+                                            key={"profile4"+i}
+                                            animation="slideInLeft">
                                             <Col className="text" xs="6">
                                                 <TechStackCard
                                                     title={d.title}
@@ -56,7 +64,9 @@ class About extends Component {
                             }
                         </Row>
                         <Row className="paragraph">
-                            <ReactWOW animation="slideInLeft">
+                            <ReactWOW
+                                key="profile5"
+                                animation="slideInLeft">
                                 <Col className="text" xs="12">
                                     <span className="lv2">{(textAbout.para3t as any)[this.lang]}</span><br/>
                                     <span className="lv3"><b>2013.03-2015.02</b><br/>

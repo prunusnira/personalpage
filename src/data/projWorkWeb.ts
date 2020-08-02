@@ -18,7 +18,8 @@ const projWorkWeb = [
             "en":""
         },
         dev: {
-            "ko":``,
+            "ko":`백엔드:
+            클라이언트`,
             "jp":"",
             "en":""
         },

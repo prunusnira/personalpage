@@ -12,8 +12,8 @@ const projWorkUnity = [
         link2: "https://github.com/prunusnira/rhythmspace",
         link3: "",
         content: {
-            "ko":"- Unity3D로 개발된 건반형 리듬게임<br/>\
-                    - BMS(Be-Music Script)를 읽어 게임을 진행<br/>",
+            "ko":`- Unity3D로 개발된 건반형 리듬게임<br/>
+                    - BMS(Be-Music Script)를 읽어 게임을 진행<br/>`,
             "jp":"",
             "en":""
         },

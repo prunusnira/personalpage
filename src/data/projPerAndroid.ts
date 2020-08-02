@@ -7,7 +7,7 @@ const projPerAndroid = [
         },
         platform: "Android (Under 7)",
         tech: "Android (Java), SQLite",
-        period: "2011~2012",
+        period: "2011~2012 / 2015",
         link1: "https://play.google.com/store/apps/details?id=com.ring.roxyeris",
         link2: "https://github.com/prunusnira/ringtone-public",
         link3: "",

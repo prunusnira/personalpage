@@ -19,9 +19,9 @@ const projPerWeb = [
             "en":``
         },
         dev: {
-            "ko":`1. 초기 버전: Spring Framework 4 + JSP<br/>\
-                    2. 전환기 버전: Spring Boot 2 + Thymeleaf + Vue.js (MPA)<br/>\
-                    3. 현재 버전: Spring Boot 2 + ReactJS (SPA)`,
+            "ko":`1. 초기 버전: Spring Framework 4 / JSP<br/>\
+                    2. 전환기 버전: Spring Boot 2 / Thymeleaf / Vue.js (MPA)<br/>\
+                    3. 현재 버전: Spring Boot 2 (Backend) + ReactJS (Frontend)`,
             "jp":``,
             "en":``
         },
@@ -43,17 +43,18 @@ const projPerWeb = [
         link3: "",
         content: {
             "ko":`- 음악게임 Pump It Up의 개인 기록 관리 사이트<br/>
-                    - 유저들이 사용하고 있는 수동적으로 관리하는 서열표를 보고 자동화하면 어떨까 하는 생각으로 제작<br/>                    - 패턴의 데이터는 DB에서 관리하지만 개인의 기록은 CSV 파일 형태로 보관`,
+                    - 유저들이 사용하고 있는 수동적으로 관리하는 서열표를 보고 자동화하면 어떨까 하는 생각으로 제작<br/>
+                    - 패턴의 데이터는 DB에서 관리하지만 개인의 기록은 CSV 파일 형태로 보관`,
             "jp":``,
             "en":``
         },
         dev: {
-            "ko":"Spring Boot 2 + ReactJS (SPA)",
+            "ko":"ExpressJS + ReactJS (SPA)",
             "jp":"",
             "en":""
         },
         image: [
-            "/projPerWeb/piu/01.jpg", ""
+            "/projPerWeb/piu/01.jpg", "/projPerWeb/piu/02.jpg"
         ]
     }
 ];

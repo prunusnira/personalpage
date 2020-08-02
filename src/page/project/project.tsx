@@ -52,6 +52,7 @@ class ProjectPage extends Component<{}, State> {
         this.loadProjectList("projPerWeb");
     }
 
+    // 리스트를 현재 선택한 것만으로 변경함
     loadProjectList(moduleName: string) {
         // 작업 전에 현재 페이지 번호를 초기화
         this.updateCatNum(0);
@@ -116,17 +117,17 @@ class ProjectPage extends Component<{}, State> {
         });
     }
 
-    moveProject(pn: boolean) {
-        if(pn) {
-            this.setState({
-                catCurNum: this.state.catCurNum+1
-            })
-        }
-        else {
-            this.setState({
-                catCurNum: this.state.catCurNum-1
-            })
-        }
+    moveProject(idx: number) {
+        const catlen = this.state.catSize;
+        let nextidx: number;
+
+        if(idx > catlen - 1) nextidx = catlen - 1;
+        else if(idx < 0) nextidx = 0;
+        else nextidx = idx;
+
+        this.setState({
+            catCurNum: nextidx
+        });
     }
 
     render() {

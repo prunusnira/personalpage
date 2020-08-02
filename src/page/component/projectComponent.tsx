@@ -74,9 +74,11 @@ class ProjectComponent extends Component<Props> {
                                             const imgUrl = process.env.PUBLIC_URL+"/img"+e;
                                             return (
                                                 <a
+                                                    key={e}
                                                     target="_blank"
+                                                    rel="noopener noreferrer"
                                                     href={imgUrl}>
-                                                    <img className="proj-comp-img" src={imgUrl}/>
+                                                    <img alt="" className="proj-comp-img" src={imgUrl}/>
                                                 </a>
                                             )
                                         })
