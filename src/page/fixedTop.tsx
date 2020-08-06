@@ -25,46 +25,57 @@ class FixedTop extends Component<{}, State> {
 
     render() {
         return (
-            <Navbar className="fixed-top transparent">
+            <Navbar className="transparent" fixed="top">
                 <NavbarBrand></NavbarBrand>
                 <Nav>
                     <NavItem>
-                        <NavLink href="#landing">
+                        <NavLink href="#landing"
+                            className="nav-color">
                             Home
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="#profile">
+                        <NavLink href="#profile"
+                            className="nav-color">
                             Profile
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="#works">
+                        <NavLink href="#works"
+                            className="nav-color">
                             Works
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="https://arincblossom.wordpress.com" target="_blank">
+                        <NavLink href="https://arincblossom.wordpress.com"
+                            target="_blank"
+                            className="nav-color">
                             Blog
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="https://www.github.com/prunusnira" target="_blank">
+                        <NavLink href="https://www.github.com/prunusnira"
+                            target="_blank"
+                            className="nav-color">
                             GitHub
                         </NavLink>
                     </NavItem>
                     <Dropdown nav isOpen={this.state.isOpen}>
-                        <DropdownToggle nav onClick={this.toggle}>
+                        <DropdownToggle nav onClick={this.toggle}
+                            className="nav-color">
                             Language
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem onClick={() => Language.changeLang("ko")}>
+                            <DropdownItem
+                                onClick={() => Language.changeLang("ko")}>
                                 한국어
                             </DropdownItem>
-                            <DropdownItem onClick={() => Language.changeLang("jp")}>
+                            <DropdownItem disabled style={{color:"lightgrey"}}
+                                onClick={() => Language.changeLang("jp")}>
                                 日本語
                             </DropdownItem>
-                            <DropdownItem onClick={() => Language.changeLang("en")}>
+                            <DropdownItem disabled style={{color:"lightgrey"}}
+                                onClick={() => Language.changeLang("en")}>
                                 English
                             </DropdownItem>
                         </DropdownMenu>

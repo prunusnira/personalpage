@@ -48,9 +48,39 @@ class ProjectComponent extends Component<Props> {
                         </Row>
                         <Row className="paragraph">
                             <Col className="text">
-                                <b>Link 1</b> <span className="lv3">{this.props.link1}</span><br/>
-                                <b>Link 2</b> <span className="lv3">{this.props.link2}</span><br/>
-                                <b>Link 3</b> <span className="lv3">{this.props.link3}</span><br/>
+                                <b>Link 1</b>
+                                &nbsp;
+                                <span className="lv3">
+                                    <a
+                                        key="link1"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href={this.props.link1}>
+                                        {this.props.link1}
+                                    </a>
+                                </span><br/>
+                                <b>Link 2</b>
+                                &nbsp;
+                                <span className="lv3">
+                                    <a
+                                        key="link2"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href={this.props.link2}>
+                                        {this.props.link2}
+                                    </a>
+                                </span><br/>
+                                <b>Link 3</b>
+                                &nbsp;
+                                <span className="lv3">
+                                    <a
+                                        key="link3"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href={this.props.link3}>
+                                        {this.props.link3}
+                                    </a>
+                                </span><br/>
                             </Col>
                         </Row>
                         <Row className="paragraph">

@@ -1,0 +1,172 @@
+const projPersonal = [
+    {
+        title: {
+            "ko":"Skill Navigator",
+            "jp":"Skill Navigator",
+            "en":"Skill Navigator"
+        },
+        platform: "Web",
+        tech: "ReactJS (TypeScript), Spring Boot (Kotlin), MariaDB, nginx, etc",
+        period: "2016.01~",
+        link1: "https://sin.nira.one",
+        link2: "https://github.com/prunusnira/gdinfo-react",
+        link3: "https://github.com/prunusnira/gdinfo-server",
+        content: {
+            "ko":`<ul>
+                    <li>음악게임 GITADORA의 개인 기록 관리 사이트</li>
+                    <li>공식에서 지원하지 않는 부가적인 기능을 제공</li>
+                    <li>(2020년 2월 기준) 등록 계정 수 3800 (한국/일본/기타 해외)</li>
+                </ul>`,
+            "jp":``,
+            "en":``
+        },
+        dev: {
+            "ko":`<ol>
+                    <li>초기 버전: Spring Framework 4 / JSP</li>
+                    <li>전환기 버전: Spring Boot 2 / Thymeleaf / Vue.js (MPA)</li>
+                    <li>현재 버전: Spring Boot 2 (Backend) + ReactJS (Frontend)</li>
+                </ol>`,
+            "jp":``,
+            "en":``
+        },
+        image: [
+            "/project/sin/01.jpg", "/project/sin/02.jpg"
+        ]
+    },
+    {
+        title: {
+            "ko":"PIU 기록 관리 툴",
+            "jp":"PIU 記録管理ツール",
+            "en":"PIU Manager"
+        },
+        platform: "Web",
+        tech: "ReactJS (TypeScript), NodeJS (TypeScript), MariaDB, etc",
+        period: "2018.07~",
+        link1: "https://piu.nira.one",
+        link2: "https://github.com/prunusnira/piumanager",
+        link3: "",
+        content: {
+            "ko":`<ul>
+                    <li>음악게임 Pump It Up의 개인 기록 관리 사이트</li>
+                    <li>유저들이 사용하고 있는 수동적으로 관리하는 서열표를 보고 자동화하면 어떨까 하는 생각으로 제작</li>
+                    <li>패턴의 데이터는 DB에서 관리하지만 개인의 기록은 CSV 파일 형태로 보관</li>
+                </ul>`,
+            "jp":``,
+            "en":``
+        },
+        dev: {
+            "ko":"ExpressJS + ReactJS (SPA)",
+            "jp":"",
+            "en":""
+        },
+        image: [
+            "/project/piu/01.jpg", "/project/piu/02.jpg"
+        ]
+    },
+    {
+        title: {
+            "ko":"rhythmspace",
+            "jp":"rhythmspace",
+            "en":"rhythmspace"
+        },
+        platform: "Windows",
+        tech: "Unity3D",
+        period: "2018",
+        link1: "https://www.youtube.com/watch?v=9Rvq0d3r2Hk",
+        link2: "https://github.com/prunusnira/rhythmspace",
+        link3: "",
+        content: {
+            "ko":`<ul>
+                    <li>Unity3D로 개발된 건반형 리듬게임</li>
+                    <li>BMS(Be-Music Script)를 읽어 게임을 진행</li>
+                </ul>`,
+            "jp":``,
+            "en":``
+        },
+        dev: {
+            "ko":`<ul>
+                <li>C# 기반의 BMS 처리 모듈을 별도로 제작<br/>
+                (BMS에 대한 클래스 정의, 각 노트 오브젝트에 대한 구조 등)</li>
+                <li>플레이 시작 시간을 기준으로 곡의 재생 시간에 맞추어 노트 위치를 변경시키는 방식으로 구현</li>
+            </ul>`,
+            "jp":"",
+            "en":""
+        },
+        image: [
+            "/project/rhythm/01.jpg", "/project/rhythm/02.jpg",
+            "/project/rhythm/03.jpg"
+        ]
+    },
+    {
+        title: {
+            "ko":"벨소리 관리자",
+            "jp":"Ringtone Manager",
+            "en":"Ringtone Manager"
+        },
+        platform: "Android (Under 7)",
+        tech: "Android (Java), SQLite",
+        period: "2011~2012 / 2015",
+        link1: "https://play.google.com/store/apps/details?id=com.ring.roxyeris",
+        link2: "https://github.com/prunusnira/ringtone-public",
+        link3: "",
+        content: {
+            "ko":`<ul>
+                    <li>기기의 전화가 한 번 올 때마다 벨소리를 랜덤으로 바꿔주는 앱</li>
+                    <li>착신 상태를 확인하여 상태 변경에 따라 시스템 옵션을 변경</li>
+                    <li>14000+ 다운로드, 3.85 평점</li>
+                    <li>Disclaimer: 8~9년 전에 작성된 앱으로 현재 안드로이드 버전과는 맞지 않음</li>
+                </ul>`,
+            "jp":``,
+            "en":``
+        },
+        dev: {
+            "ko":`<ul>
+                <li>Android 내부의 Telephony Manager로 착신 상태 확인</li>
+                <li>SQLite를 사용해 등록된 곡 관리</li>
+            </ul>`,
+            "jp":``,
+            "en":``
+        },
+        image: [
+            "/project/ringtone/01.jpg", "/project/ringtone/02.jpg",
+            "/project/ringtone/03.jpg", "/project/ringtone/04.jpg",
+            "/project/ringtone/05.jpg"
+        ]
+    },
+    {
+        title: {
+            "ko":"Drawing Launcher",
+            "jp":"Drawing Launcher",
+            "en":"Drawing Launcher"
+        },
+        platform: "Android",
+        tech: "Android (Java)",
+        period: "2016.08~2017.04",
+        link1: "https://play.google.com/store/apps/details?id=com.roxyeris.drawinglauncher",
+        link2: "https://github.com/prunusnira/DrawingLauncher",
+        link3: "",
+        content: {
+            "ko":`<ul>
+                    <li>제스처를 그려서 사용하는 앱 런처</li>
+                    <li>개인 사용을 목표로 만들었음</li>
+                </ul>`,
+            "jp":``,
+            "en":``
+        },
+        dev: {
+            "ko":`<ul>
+                <li>Android의 API로 제공되는 Gesture, Gesture Store를 사용하여 개발</li>
+                <li>Gesture는 Gesture Store에 포함되어 로컬 파일로 저장됨 - 별도 DB는 필요없다</li>
+                <li>앱 서랍은 GridLayout으로 표현</li>
+            </ul>`,
+            "jp":"",
+            "en":""
+        },
+        image: [
+            "/project/launcher/01.jpg", "/project/launcher/02.jpg",
+            "/project/launcher/03.jpg", "/project/launcher/04.jpg"
+        ]
+    }
+];
+
+export default projPersonal;

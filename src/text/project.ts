@@ -16,7 +16,7 @@ const textProject = {
     },
     dev: {
         "ko":"개발",
-        "jp":"",
+        "jp":"開発内容",
         "en":"Development"
     }
 };

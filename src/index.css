@@ -7,11 +7,7 @@
       url("./file/SquarePlusR.ttf") format("truetype");
 }
 
-body {
-  padding-top: 56px;
-}
-
 html, body, #root {
-  height: calc(100vh - 56px);
+  height: 100vh;
   font-family: "SquarePlus";
 }

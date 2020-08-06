@@ -2,7 +2,6 @@ import React, { Component, useState } from 'react';
 import {
     Carousel,
     CarouselItem,
-    CarouselControl,
     CarouselIndicators
 } from 'reactstrap';
 import ProjectItem from '../../data/projectItem';
@@ -121,7 +120,6 @@ class ProjectLinearCover extends Component<Props, State> {
                 />
 
                 {/* 이하 다수의 CarouselItem을 추가해야 함 */
-                //this.getCarouselItems
                 this.props.catList.map((item) => {
                     return (
                         <CarouselItem
@@ -145,7 +143,7 @@ class ProjectLinearCover extends Component<Props, State> {
                 })
                 }
 
-                <CarouselControl
+                {/*<CarouselControl
                     direction="prev"
                     directionText="Previous"
                     onClickHandler={this.prev}
@@ -154,7 +152,7 @@ class ProjectLinearCover extends Component<Props, State> {
                     direction="next"
                     directionText="Next"
                     onClickHandler={this.next}
-                />
+                />*/}
             </Carousel>
         );
     }

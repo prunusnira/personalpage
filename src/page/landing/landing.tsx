@@ -9,12 +9,12 @@ class Landing extends Component {
     render() {
         return (
             <Fragment>
-                <Row className="h100 color-land" id="landing">
+                <Row className="color-land flex-center" id="landing">
                     <Col xs="12">
                         <Row className="paragraph">
                             <ReactWOW animation="fadeInDown">
                                 <Col className="text text-center" xs="12">
-                                    <span className="lv1">Curiosities,</span><br/>
+                                    <span className="lv1">Curiosity,</span><br/>
                                     <span className="lv1">Solving,</span><br/>
                                     <span className="lv1">and Evolving.</span><br/>
                                 </Col>

@@ -1,15 +1,11 @@
 import React, {Component, Fragment} from 'react';
-import { Col, Row, Button } from 'reactstrap';
+import { Col, Row, Button, ButtonGroup } from 'reactstrap';
 
 import ProjectWrapper from '../component/projectWrapper';
 import ProjectItem from '../../data/projectItem';
 
-import projPerAndroid from '../../data/projPerAndroid';
-import projPerUnity from '../../data/projPerUnity';
-import projPerWeb from '../../data/projPerWeb';
-import projWorkWeb from '../../data/projWorkWeb';
-import projWorkUnity from '../../data/projWorkUnity';
-import projWorkEtc from '../../data/projWorkEtc';
+import projPersonal from '../../data/projPersonal';
+import projNonPersonal from '../../data/projNonPersonal';
 
 import Language from '../../tool/language';
 import ProjectSelector from '../component/projectSelector';
@@ -25,13 +21,7 @@ interface State {
 }
 
 class ProjectPage extends Component<{}, State> {
-    private projList = [ projPerAndroid,
-                        projPerUnity,
-                        projPerWeb,
-                        projWorkWeb,
-                        projWorkUnity,
-                        projWorkEtc
-                    ];
+    private projList = [ projPersonal, projNonPersonal ];
 
     private lang: string = Language.getLang();
 
@@ -49,7 +39,7 @@ class ProjectPage extends Component<{}, State> {
     }
 
     componentDidMount() {
-        this.loadProjectList("projPerWeb");
+        this.loadProjectList("projPersonal");
     }
 
     // 리스트를 현재 선택한 것만으로 변경함
@@ -59,23 +49,11 @@ class ProjectPage extends Component<{}, State> {
 
         let m = null;
         switch(moduleName) {
-            case "projPerWeb":
-                m = projPerWeb;
+            case "projPersonal":
+                m = projPersonal;
                 break;
-            case "projPerUnity":
-                m = projPerUnity;
-                break;
-            case "projPerAndroid":
-                m = projPerAndroid;
-                break;
-            case "projWorkWeb":
-                m = projWorkWeb;
-                break;
-            case "projWorkUnity":
-                m = projWorkUnity;
-                break;
-            case "projWorkEtc":
-                m = projWorkEtc;
+            case "projNonPersonal":
+                m = projNonPersonal;
                 break;
         }
 
@@ -143,21 +121,11 @@ class ProjectPage extends Component<{}, State> {
                             </ReactWOW>
                         </Row>
                         <Row className="text-center">
-                            <Col xs="6">
-                                <span className="lv3">
-                                    Personal Development
-                                </span><br/>
-                                <Button className="btn-category" onClick={() => this.loadProjectList("projPerWeb")}>Web</Button>
-                                <Button className="btn-category" onClick={() => this.loadProjectList("projPerAndroid")}>Android</Button>
-                                <Button className="btn-category" onClick={() => this.loadProjectList("projPerUnity")}>Unity</Button>
-                            </Col>
-                            <Col xs="6">
-                                <span className="lv3">
-                                    Non-Personal Development
-                                </span><br/>
-                                <Button className="btn-category" onClick={() => this.loadProjectList("projWorkWeb")}>Web</Button>
-                                <Button className="btn-category" onClick={() => this.loadProjectList("projWorkUnity")}>Unity</Button>
-                                <Button className="btn-category" onClick={() => this.loadProjectList("projWorkEtc")}>etc</Button>
+                            <Col xs="12">
+                                <ButtonGroup style={{width: "100%"}}>
+                                    <Button color="primary" onClick={() => this.loadProjectList("projPersonal")}>Personal</Button>
+                                    <Button color="primary" onClick={() => this.loadProjectList("projNonPersonal")}>Other</Button>
+                                </ButtonGroup>
                             </Col>
                         </Row>
                         {/** Point로 개수 표시

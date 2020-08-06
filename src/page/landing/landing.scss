@@ -11,8 +11,15 @@
     background-repeat: no-repeat;
     background-position: center center;
     color: white;
+    height: 100vh;
 }
 
 .arrow-down-size {
     font-size: 250%;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
