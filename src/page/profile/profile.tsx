@@ -68,13 +68,16 @@ class About extends Component {
                                 key="profile5"
                                 animation="slideInLeft">
                                 <Col className="text" xs="12">
-                                    <span className="lv2">{(textAbout.para3t as any)[this.lang]}</span><br/>
+                                    <span className="lv2">{(textAbout.para3t as any)[this.lang]}</span><br/><br/>
                                     <span className="lv3"><b>2013.03-2015.02</b><br/>
-                                        {(textAbout.para3c1 as any)[this.lang]}<br/>
-                                        MS. in Computer Science and Engineering
-                                    </span><br/>
+                                        <span dangerouslySetInnerHTML={
+                                            {__html:(textAbout.para3c1 as any)[this.lang]}
+                                        }></span>
+                                    </span><br/><br/>
                                     <span className="lv3"><b>2015.05-2020.05</b><br/>
-                                        {(textAbout.para3c2 as any)[this.lang]}
+                                        <span dangerouslySetInnerHTML={
+                                            {__html:(textAbout.para3c2 as any)[this.lang]}
+                                        }></span>
                                     </span>
                                 </Col>
                             </ReactWOW>

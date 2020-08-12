@@ -59,7 +59,7 @@ const projWorkEtc = [
             "en":""
         },
         image: [
-            
+            "/project/backup/01.jpg", "/project/backup/02.jpg"
         ]
     },
     {
@@ -71,7 +71,7 @@ const projWorkEtc = [
         platform: "Java, Android",
         tech: "Java, Android, Protege, Jena",
         period: "2013",
-        link1: "",
+        link1: "https://www.researchgate.net/publication/264428214_Mobile_situation-aware_framework_for_developing_smart_mobile_software",
         link2: "",
         link3: "",
         content: {

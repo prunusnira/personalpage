@@ -29,13 +29,11 @@ class ProjectComponent extends Component<Props> {
                     </CardHeader>
                     <CardBody>
                         <Row className="paragraph">
-                            <Col className="text">
+                            <Col xs="6" className="text">
                                 <b>{(textProject.platform as any)[this.lang]}</b><br/>
                                 <span className="lv3">{this.props.platform}</span>
                             </Col>
-                        </Row>
-                        <Row className="paragraph">
-                            <Col className="text">
+                            <Col xs="6" className="text">
                                 <b>{(textProject.period as any)[this.lang]}</b><br/>
                                 <span className="lv3">{this.props.period}</span>
                             </Col>

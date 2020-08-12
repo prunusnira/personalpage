@@ -6,6 +6,7 @@ import {
 } from 'reactstrap';
 import ProjectItem from '../../data/projectItem';
 import ProjectComponent from './projectComponent';
+import { noAuto } from '@fortawesome/fontawesome-svg-core';
 
 interface Props {
     catList: Array<ProjectItem>,
@@ -112,6 +113,7 @@ class ProjectLinearCover extends Component<Props, State> {
                 activeIndex={this.props.catCurNum}
                 next={this.next}
                 previous={this.prev}
+                interval={false}
             >
                 <CarouselIndicators
                     items={this.props.catList}
@@ -142,17 +144,6 @@ class ProjectLinearCover extends Component<Props, State> {
                     );
                 })
                 }
-
-                {/*<CarouselControl
-                    direction="prev"
-                    directionText="Previous"
-                    onClickHandler={this.prev}
-                />
-                <CarouselControl
-                    direction="next"
-                    directionText="Next"
-                    onClickHandler={this.next}
-                />*/}
             </Carousel>
         );
     }

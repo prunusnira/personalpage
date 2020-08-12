@@ -124,7 +124,7 @@ class ProjectPage extends Component<{}, State> {
                             <Col xs="12">
                                 <ButtonGroup style={{width: "100%"}}>
                                     <Button color="primary" onClick={() => this.loadProjectList("projPersonal")}>Personal</Button>
-                                    <Button color="primary" onClick={() => this.loadProjectList("projNonPersonal")}>Other</Button>
+                                    <Button color="primary" onClick={() => this.loadProjectList("projNonPersonal")}>Non-Personal</Button>
                                 </ButtonGroup>
                             </Col>
                         </Row>
