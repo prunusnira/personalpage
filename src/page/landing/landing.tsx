@@ -23,11 +23,10 @@ class Landing extends Component {
                         <Row className="paragraph">
                             <ReactWOW animation="slideInRight" delay="0.1s">
                                 <Col className="text text-right" xs="12">
-                                    <span className="lv2">Tae Jun Kang</span>&nbsp;
+                                    <span className="lv2">Tae Jun Kang</span><br/>
                                     <span className="lv3">a.k.a. Nira</span><br/>
                                     <span className="lv3">a developer</span><br/>
                                     <span className="lv3">a gamer</span><br/>
-                                    <span className="lv3">an android user</span><br/>
                                 </Col>
                             </ReactWOW>
                         </Row>

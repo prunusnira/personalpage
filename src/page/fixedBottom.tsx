@@ -13,7 +13,8 @@ class FixedBottom extends Component {
                     fontSize: "80%"
                 }}
             >
-                (c) 2020 Prunus Nira
+                (c) 2020 Prunus Nira<br/>
+                Hosted on github.io
             </footer>
         )
     }
