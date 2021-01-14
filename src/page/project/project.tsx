@@ -1,28 +1,28 @@
-import React, {Component, Fragment} from 'react';
-import { Col, Row, Button, ButtonGroup } from 'reactstrap';
+import React, {Component} from 'react';
+import { Col, Row, Container, Nav, NavItem, TabContent, TabPane, NavLink } from 'reactstrap';
 
-import ProjectWrapper from '../component/projectWrapper';
 import ProjectItem from '../../data/projectItem';
 
 import projPersonal from '../../data/projPersonal';
 import projNonPersonal from '../../data/projNonPersonal';
 
 import Language from '../../tool/language';
-import ProjectSelector from '../component/projectSelector';
 import ReactWOW from 'react-wow';
 
 import './project.scss';
+import ProjectListWrapper from './projectListWrapper';
 
 interface State {
-    catName: string;
+    catName: string,
     catSize: number,
     catList: Array<ProjectItem>,
-    catCurNum: number
+    ppList: Array<ProjectItem>,
+    npList: Array<ProjectItem>,
+    catCurNum: number,
+    catPage: number
 }
 
 class ProjectPage extends Component<{}, State> {
-    private projList = [ projPersonal, projNonPersonal ];
-
     private lang: string = Language.getLang();
 
     constructor(props: {}) {
@@ -35,7 +35,10 @@ class ProjectPage extends Component<{}, State> {
         catName: "",
         catSize: 0,
         catList: Array<ProjectItem>(),
-        catCurNum: 0
+        ppList: Array<ProjectItem>(),
+        npList: Array<ProjectItem>(),
+        catCurNum: 0,
+        catPage: 0
     }
 
     componentDidMount() {
@@ -59,34 +62,39 @@ class ProjectPage extends Component<{}, State> {
 
         if(m != null) {
             const size = m.length;
-            const list = Array<ProjectItem>();
+            const plist = Array<ProjectItem>();
+            const nlist = Array<ProjectItem>();
 
-            for(let i = 0; i < size; i++) {
-                const title = (m[i].title as any)[this.lang];
-                const platform = m[i].platform;
-                const tech = m[i].tech;
-                const period = m[i].period;
-                const link1 = m[i].link1;
-                const link2 = m[i].link2;
-                const link3 = m[i].link3;
-                const content = (m[i].content as any)[this.lang];
-                const dev = (m[i].dev as any)[this.lang];
-                const image = m[i].image;
-
-                const item = new ProjectItem(
-                    title, platform, tech, period,
-                    link1, link2, link3, content,
-                    dev, image);
-                
-                list.push(item);
-            }
+            projPersonal.forEach(e => {
+                plist.push(this.generateItemObject(e));
+            });
+            projNonPersonal.forEach(e => {
+                nlist.push(this.generateItemObject(e));
+            });
 
             this.setState({
                 catName: moduleName,
                 catSize: size,
-                catList: list
+                ppList: plist,
+                npList: nlist
             });
         }
+    }
+
+    generateItemObject(e: any) {
+        return new ProjectItem(
+            e.icon,
+            (e.title as any)[this.lang],
+            (e.simpledesc as any)[this.lang],
+            e.platform,
+            e.tech,
+            e.period,
+            e.link1,
+            e.link2,
+            e.link3,
+            (e.content as any)[this.lang],
+            (e.dev as any)[this.lang],
+            e.image);
     }
 
     updateCatNum(num: number) {
@@ -110,46 +118,66 @@ class ProjectPage extends Component<{}, State> {
 
     render() {
         return (
-            <Fragment>
-                <Row className="h100 color-proj" id="works">
-                    <Col xs="12">
-                        <Row className="paragraph">
-                            <ReactWOW animation="slideInLeft">
-                                <Col className="text text-center" xs="12">
-                                    <span className="lv1">Works</span>
+            <div className="color-proj">
+                <Container>
+                    <Row className="h100" id="works">
+                        <Col xs="12">
+                            <Row className="paragraph">
+                                <ReactWOW animation="slideInLeft">
+                                    <Col className="text text-center" xs="12">
+                                        <span className="lv1">Works</span>
+                                    </Col>
+                                </ReactWOW>
+                            </Row>
+
+                            <Row>
+                                <Col className="text-center" xs="12">
+                                    Click/Touch to expand
                                 </Col>
-                            </ReactWOW>
-                        </Row>
-                        <Row className="text-center">
-                            <Col xs="12">
-                                <ButtonGroup style={{width: "100%"}}>
-                                    <Button color="primary" onClick={() => this.loadProjectList("projPersonal")}>Personal</Button>
-                                    <Button color="primary" onClick={() => this.loadProjectList("projNonPersonal")}>Non-Personal</Button>
-                                </ButtonGroup>
-                            </Col>
-                        </Row>
-                        {/** Point로 개수 표시
-                         * point를 선택하면 catCurNum이 변경
-                         */}
-                        <Row>
-                            <Col xs="12" className="text-center">
-                                <ProjectSelector
-                                    catSize={this.state.catSize}
-                                    catCurNum={this.state.catCurNum}
-                                    updateCatNum={this.updateCatNum}
-                                />
-                            </Col>
-                        </Row>
-                        <ProjectWrapper
-                            catName={this.state.catName}
-                            catSize={this.state.catSize}
-                            catList={this.state.catList}
-                            catCurNum={this.state.catCurNum}
-                            moveProject={this.moveProject}
-                        />
-                    </Col>
-                </Row>
-            </Fragment>
+                            </Row>
+
+                            <Row>
+                                <ReactWOW animation="slideInLeft">
+                                    <Col xs="12">
+                                        <Nav tabs>
+                                            <NavItem>
+                                                <NavLink
+                                                    className={(this.state.catPage === 0 ? "active":"")}
+                                                    onClick={() => {
+                                                    this.setState({
+                                                        catPage: 0
+                                                    });
+                                                }}>
+                                                    Personal Work
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink
+                                                    className={(this.state.catPage === 1 ? "active":"")}
+                                                    onClick={() => {
+                                                    this.setState({
+                                                        catPage: 1
+                                                    });
+                                                }}>
+                                                    Non-Personal Work
+                                                </NavLink>
+                                            </NavItem>
+                                        </Nav>
+                                        <TabContent activeTab={this.state.catPage}>
+                                            <TabPane tabId={0}>
+                                                <ProjectListWrapper list={this.state.ppList}/>
+                                            </TabPane>
+                                            <TabPane tabId={1}>
+                                                <ProjectListWrapper list={this.state.npList}/>
+                                            </TabPane>
+                                        </TabContent>
+                                    </Col>
+                                </ReactWOW>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         )
     }
 }

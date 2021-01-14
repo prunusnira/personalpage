@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Card, CardHeader, CardBody } from 'reactstrap';
+import "./profile.scss";
 
 interface Props {
     title: string,
@@ -13,7 +14,7 @@ class TechStackCard extends Component<Props> {
     render() {
         return (
             <Card className="text">
-                <CardHeader className="lv2">
+                <CardHeader className="lv2 profheader">
                     {this.props.title}
                 </CardHeader>
                 <CardBody>

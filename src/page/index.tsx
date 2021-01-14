@@ -1,5 +1,4 @@
-import React, {Component} from 'react';
-import {Container} from 'reactstrap';
+import React, {Component, Fragment} from 'react';
 
 import Landing from './landing/landing';
 import FixedTop from './fixedTop';
@@ -7,18 +6,20 @@ import FixedBottom from './fixedBottom';
 import About from './profile/profile';
 import ProjectPage from './project/project';
 import Experience from './experience';
+import Link from './link/link';
 
 class Index extends Component {
     render() {
         return (
-            <Container fluid>
+            <Fragment>
                 <FixedTop />
                 <Landing />
                 <About />
                 <ProjectPage />
                 <Experience />
+                <Link />
                 <FixedBottom />
-            </Container>
+            </Fragment>
         )
     }
 }

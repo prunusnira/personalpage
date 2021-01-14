@@ -1,7 +1,13 @@
-const projWorkEtc = [
+const projNonPersonal = [
     {
+        icon: "/project/chatbot/icon.png",
         title: {
-            "ko":"인증서 채팅 봇",
+            "ko":"UniBot (인증서 채팅 봇)",
+            "jp":"",
+            "en":""
+        },
+        simpledesc: {
+            "ko":"인증서 사용에 대한 채팅봇",
             "jp":"",
             "en":""
         },
@@ -14,7 +20,8 @@ const projWorkEtc = [
         content: {
             "ko":`<ul>
                     <li>인증서 서비스 사용자들에게 필요한 사용법, 질문에 대한 답변을 채팅봇으로 만든 서비스</li>
-                    <li>향후 카카오톡 채널 연동, SSL인증서에 대한 채팅봇 개발 등이 예정되어 있다</li>
+                    <li>향후 카카오톡 채널 연동, SSL인증서에 대한 채팅봇 개발 등이 예정되어 있었다</li>
+                    <li><b>(관련 인원 퇴사로 2020년 11월 30일 서비스 종료)</b></li>
                 </ul>`,
             "jp":"",
             "en":""
@@ -30,8 +37,14 @@ const projWorkEtc = [
         ]
     },
     {
+        icon: "/project/backup/icon.png",
         title: {
             "ko":"인증서 클라우드 백업 서비스",
+            "jp":"",
+            "en":""
+        },
+        simpledesc: {
+            "ko":"인증서를 백업/복구 할 수 있게 해주는 서비스",
             "jp":"",
             "en":""
         },
@@ -63,10 +76,16 @@ const projWorkEtc = [
         ]
     },
     {
+        icon: "/project/situation/icon.png",
         title: {
             "ko":"온톨로지 기반의 상황인지 모바일 프레임워크",
             "jp":"Skill Navigator",
             "en":"Situation aware mobile framework based on ontology"
+        },
+        simpledesc: {
+            "ko":"논문 내용 증명 개발 지원으로 참여한 프로젝트",
+            "jp":"",
+            "en":""
         },
         platform: "Java, Android",
         tech: "Java, Android, Protege, Jena",
@@ -103,10 +122,16 @@ const projWorkEtc = [
         ]
     },
     {
+        icon: "/project/aicore/icon.png",
         title: {
             "ko":"AI 플랫폼 개발",
             "jp":"AIプラットフォーム",
             "en":"AI Platform Development"
+        },
+        simpledesc: {
+            "ko":"Agent간 데이터 전송 파트 개발",
+            "jp":"",
+            "en":""
         },
         platform: "Java",
         tech: "",
@@ -146,10 +171,16 @@ const projWorkEtc = [
         ]
     },
     {
+        icon: "/project/aigame/icon.png",
         title: {
-            "ko":"AI 게임 개발",
+            "ko":"AI 엔진을 활용한 게임 개발",
             "jp":"AIゲーム開発",
             "en":"AI Game Development"
+        },
+        simpledesc: {
+            "ko":"서버와 클라이언트 간 통신, Google Play 연동 등 개발",
+            "jp":"",
+            "en":""
         },
         platform: "Unity",
         tech: "Unity",
@@ -186,16 +217,22 @@ const projWorkEtc = [
         ]
     },
     {
+        icon: "/project/fautonomy/icon.png",
         title: {
             "ko":"AI 게임 개발 플러그인",
             "jp":"AIゲームプラグイン開発",
             "en":"AI Game Plugin Development"
         },
+        simpledesc: {
+            "ko":"",
+            "jp":"",
+            "en":""
+        },
         platform: "Unity",
         tech: "Unity",
         period: "2016.12~2018.1",
         link1: "https://aibrain.com/products/futurable-true-ai-game/",
-        link2: "",
+        link2: "https://assetstore.unity.com/packages/tools/ai/fautonomy-105444",
         link3: "",
         content: {
             "ko":`<ul>
@@ -230,4 +267,4 @@ const projWorkEtc = [
     },
 ];
 
-export default projWorkEtc;
+export default projNonPersonal;

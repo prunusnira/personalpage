@@ -1,4 +1,23 @@
 .color-prof {
-    background-color: rgb(48, 169, 222);
+    background:linear-gradient(
+        rgb(30, 35, 41),
+        rgb(30, 30, 30),
+        rgb(20, 20, 20),
+        rgb(10, 10, 10),
+        rgb(0, 0, 0),
+        rgb(10, 10, 10),
+        rgb(20, 20, 20),
+        rgb(30, 30, 30),
+        rgb(40, 40, 40)
+    );
+    color: white;
+}
+
+.techcard {
+    padding: 10px;
+}
+
+.profheader {
+    background-color: rgb(35, 157, 173) !important;
     color: white;
 }

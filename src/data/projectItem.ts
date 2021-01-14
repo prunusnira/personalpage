@@ -1,5 +1,7 @@
 class ProjectItem {
+    icon: string;
     title: string;
+    simpledesc: string;
     platform: string;
     tech: string;
     period: string;
@@ -10,10 +12,22 @@ class ProjectItem {
     dev: string;
     image: Array<string>;
 
-    constructor(title: string, platform: string, tech: string,
-        period: string, link: string, link2: string, link3: string,
-        content: string, dev: string, image: Array<string>) {
+    constructor(
+        icon: string,
+        title: string,
+        simpledesc: string,
+        platform: string,
+        tech: string,
+        period: string,
+        link: string,
+        link2: string,
+        link3: string,
+        content: string,
+        dev: string,
+        image: Array<string>) {
+            this.icon = icon;
             this.title = title;
+            this.simpledesc = simpledesc;
             this.platform = platform;
             this.tech = tech;
             this.period = period;

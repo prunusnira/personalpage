@@ -1,4 +1,4 @@
-.color-land {
+.bg-landing {
     background: linear-gradient(
         rgb(30, 35, 41), 
         rgb(30, 35, 41), 
@@ -10,6 +10,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.color-land {
     color: white;
     height: 100vh;
 }

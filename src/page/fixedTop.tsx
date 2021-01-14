@@ -37,7 +37,7 @@ class FixedTop extends Component<{}, State> {
                     <NavItem>
                         <NavLink href="#profile"
                             className="nav-color">
-                            Profile
+                            About
                         </NavLink>
                     </NavItem>
                     <NavItem>
@@ -47,17 +47,9 @@ class FixedTop extends Component<{}, State> {
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="https://arincblossom.wordpress.com"
-                            target="_blank"
+                        <NavLink href="#link"
                             className="nav-color">
-                            Blog
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="https://www.github.com/prunusnira"
-                            target="_blank"
-                            className="nav-color">
-                            GitHub
+                            Link
                         </NavLink>
                     </NavItem>
                     <Dropdown nav isOpen={this.state.isOpen}>

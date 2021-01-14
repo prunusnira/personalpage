@@ -1,4 +1,4 @@
-.color-proj {
+.color-link {
     background:linear-gradient(
         rgb(40, 40, 40),
         rgb(30, 30, 30),
@@ -14,33 +14,12 @@
     padding-bottom: 50px;
 }
 
-.workheader {
-    background-color: rgb(255, 255, 255) !important;
-    color: white;
+.linktext {
+    font-size: 1.2em;
 }
 
-.projobj-overall {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.projobj-icon {
-    width: 80px;
-    height: 80px;
-}
-
-.projobj-title {
-    font-size: 1.8em;
-}
-
-.projobj-image {
-    max-width: 100%;
-    max-height: 240px;
-}
-
-.projcard {
-    background-color: rgb(70, 70, 70) !important;
-    color: white;
+.linkpadding {
+    padding-bottom: 50px;
 
     a:link {
         color: yellow;

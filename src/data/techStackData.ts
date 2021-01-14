@@ -1,13 +1,13 @@
 const techStack=[
     {
-        title: "Web",
+        title: "Web (Frontend)",
         c1t: "Language",
         c1c: "JavaScript, TypeScript, CSS, SCSS, HTML",
         c2t: "Framework & Library",
         c2c: "ReactJS, jQuery, Bootstrap"
     },
     {
-        title: "Server",
+        title: "Web (Server)",
         c1t: "Language",
         c1c: "Java, Kotlin, JavaScript",
         c2t: "Framework & Library",

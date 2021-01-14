@@ -1,9 +1,54 @@
 const projPersonal = [
     {
+        icon: "/project/banpick/icon.png",
+        title: {
+            "ko":"트위치 밴픽 앱",
+            "jp":"",
+            "en":"Twitch BanPicker"
+        },
+        simpledesc: {
+            "ko":"트위치 스트리머의 컨텐츠에 활용될 수 있는 LoL 스타일 밴/픽 앱",
+            "jp":"",
+            "en":""
+        },
+        platform: "Web",
+        tech: "ReactJS (TypeScript), Redux",
+        period: "2020.11.09~2020.11.14 (5일)",
+        link1: "https://banpick.nira.one",
+        link2: "https://github.com/prunusnira/twitch-banpicker",
+        link3: "https://youtu.be/t37LvUoVcFc",
+        content: {
+            "ko":`<ul>
+                    <li>(링크3: 실제 사용 예)</li>
+                    <li>트위치 스트리머를 위한 LoL 스타일의 밴/픽 웹앱</li>
+                </ul>`,
+            "jp":``,
+            "en":``
+        },
+        dev: {
+            "ko":`<ol>
+                    <li>ReactJS 17.0</li>
+                    <li>NGINX에서 구동</li>
+                    <li>Google Chrome 웹스토어용 앱으로도 같이 개발되었으나 현재는 게시하지 않음</li>
+                </ol>`,
+            "jp":``,
+            "en":``
+        },
+        image: [
+            "/project/banpick/01.png"
+        ]
+    },
+    {
+        icon: "/project/sin/icon.png",
         title: {
             "ko":"Skill Navigator",
             "jp":"Skill Navigator",
             "en":"Skill Navigator"
+        },
+        simpledesc: {
+            "ko":"리듬게임 GITADORA 시리즈의 기록 관리 사이트",
+            "jp":"",
+            "en":""
         },
         platform: "Web",
         tech: "ReactJS (TypeScript), Spring Boot (Kotlin), MariaDB, nginx, etc",
@@ -34,10 +79,16 @@ const projPersonal = [
         ]
     },
     {
+        icon: "/project/piu/icon.png",
         title: {
             "ko":"PIU 기록 관리 툴",
             "jp":"PIU 記録管理ツール",
             "en":"PIU Manager"
+        },
+        simpledesc: {
+            "ko":"리듬게임 Pump It Up의 기록 관리 사이트",
+            "jp":"",
+            "en":""
         },
         platform: "Web",
         tech: "ReactJS (TypeScript), NodeJS (TypeScript), MariaDB, etc",
@@ -64,16 +115,22 @@ const projPersonal = [
         ]
     },
     {
+        icon: "/project/rhythm/icon.png",
         title: {
-            "ko":"rhythmspace",
-            "jp":"rhythmspace",
-            "en":"rhythmspace"
+            "ko":"RhythmTracers (BMS Player)",
+            "jp":"RhythmTracers (BMS Player)",
+            "en":"RhythmTracers (BMS Player)"
         },
-        platform: "Windows",
+        simpledesc: {
+            "ko":"Unity로 제작된 BMS 구동기",
+            "jp":"",
+            "en":""
+        },
+        platform: "Unity3D (Windows)",
         tech: "Unity3D",
-        period: "2018",
-        link1: "https://www.youtube.com/watch?v=9Rvq0d3r2Hk",
-        link2: "https://github.com/prunusnira/rhythmspace",
+        period: "2020.08~",
+        link1: "https://youtu.be/lWQG4gIjGDM",
+        link2: "https://github.com/prunusnira/rhythmspaceV2",
         link3: "",
         content: {
             "ko":`<ul>
@@ -93,15 +150,21 @@ const projPersonal = [
             "en":""
         },
         image: [
-            "/project/rhythm/01.jpg", "/project/rhythm/02.jpg",
+            "/project/rhythm/01.png", "/project/rhythm/02.png",
             "/project/rhythm/03.jpg"
         ]
     },
     {
+        icon: "/project/ringtone/icon.png",
         title: {
             "ko":"벨소리 관리자",
             "jp":"Ringtone Manager",
             "en":"Ringtone Manager"
+        },
+        simpledesc: {
+            "ko":"구 안드로이드에서 사용된 벨소리 랜덤 재생 어플",
+            "jp":"",
+            "en":""
         },
         platform: "Android (Under 7)",
         tech: "Android (Java), SQLite",
@@ -134,10 +197,16 @@ const projPersonal = [
         ]
     },
     {
+        icon: "/project/launcher/icon.png",
         title: {
             "ko":"Drawing Launcher",
             "jp":"Drawing Launcher",
             "en":"Drawing Launcher"
+        },
+        simpledesc: {
+            "ko":"사용자의 제스처로 앱을 실행하는 런처",
+            "jp":"",
+            "en":""
         },
         platform: "Android",
         tech: "Android (Java)",
