@@ -12,14 +12,14 @@ const projPersonal = [
             "en":""
         },
         platform: "Web",
-        tech: "ReactJS (TypeScript), Redux",
-        period: "2020.11.09~2020.11.14 (5일)",
+        tech: "ReactJS (TypeScript), bootstrap, AWS S3",
+        period: "2020.11.09~2020.11.14 (5일+@)",
         link1: "https://banpick.nira.one",
         link2: "https://github.com/prunusnira/twitch-banpicker",
         link3: "https://youtu.be/t37LvUoVcFc",
         content: {
             "ko":`<ul>
-                    <li>(링크3: 실제 사용 예)</li>
+                    <li>(링크3: 실제 사용 예시 영상)</li>
                     <li>트위치 스트리머를 위한 LoL 스타일의 밴/픽 웹앱</li>
                 </ul>`,
             "jp":``,
@@ -27,9 +27,9 @@ const projPersonal = [
         },
         dev: {
             "ko":`<ol>
-                    <li>ReactJS 17.0</li>
-                    <li>NGINX에서 구동</li>
-                    <li>Google Chrome 웹스토어용 앱으로도 같이 개발되었으나 현재는 게시하지 않음</li>
+                    <li>ReactJS 17.0 기반 개발</li>
+                    <li>AWS S3에서 배포</li>
+                    <li>Google Chrome 웹스토어용 앱으로도 같이 개발되었으나 서버를 S3로 옮기면서 게시하지 않음</li>
                 </ol>`,
             "jp":``,
             "en":``
@@ -67,9 +67,10 @@ const projPersonal = [
         },
         dev: {
             "ko":`<ol>
-                    <li>초기 버전: Spring Framework 4 / JSP</li>
-                    <li>전환기 버전: Spring Boot 2 / Thymeleaf / Vue.js (MPA)</li>
-                    <li>현재 버전: Spring Boot 2 (Backend) + ReactJS (Frontend)</li>
+                    <li>1세대: Spring Framework 4 / JSP</li>
+                    <li>2세대: Spring Boot 2 / Thymeleaf / Vue.js (MPA)</li>
+                    <li>3세대: Spring Boot 2 (Backend) + ReactJS (Frontend): GCE -> EC2 -> Lightsail</li>
+                    <li>4세대: Spring Boot 2 (Backend-AWS Lightsail) + ReactJS (Frontend-AWS S3)</li>
                 </ol>`,
             "jp":``,
             "en":``
@@ -91,7 +92,7 @@ const projPersonal = [
             "en":""
         },
         platform: "Web",
-        tech: "ReactJS (TypeScript), NodeJS (TypeScript), MariaDB, etc",
+        tech: "ReactJS (TypeScript), NodeJS (TypeScript), AWS DynamoDB, AWS S3, AWS Lambda, etc",
         period: "2018.07~",
         link1: "https://piu.nira.one",
         link2: "https://github.com/prunusnira/piumanager",
@@ -101,12 +102,21 @@ const projPersonal = [
                     <li>음악게임 Pump It Up의 개인 기록 관리 사이트</li>
                     <li>유저들이 사용하고 있는 수동적으로 관리하는 서열표를 보고 자동화하면 어떨까 하는 생각으로 제작</li>
                     <li>패턴의 데이터는 DB에서 관리하지만 개인의 기록은 CSV 파일 형태로 보관</li>
+                    <li>Kotlin을 사용해 WebView를 응용한 하이브리드 앱을 개발하여 PlayStore에 게시</li>
                 </ul>`,
             "jp":``,
             "en":``
         },
         dev: {
-            "ko":"ExpressJS + ReactJS (SPA)",
+            "ko":`Backend<br/>
+                <ul>
+                    <li>1세대: NodeJS, NGINX, MariaDB</li>
+                    <li>2세대: AWS Lambda, AWS S3, AWS DynamoDB</li>
+                </ul>
+                Front<br/>
+                <ul>
+                    <li>ReactJS, TypeScript</li>
+                </ul>`,
             "jp":"",
             "en":""
         },
@@ -142,10 +152,10 @@ const projPersonal = [
         },
         dev: {
             "ko":`<ul>
-                <li>C# 기반의 BMS 처리 모듈을 별도로 제작<br/>
-                (BMS에 대한 클래스 정의, 각 노트 오브젝트에 대한 구조 등)</li>
-                <li>플레이 시작 시간을 기준으로 곡의 재생 시간에 맞추어 노트 위치를 변경시키는 방식으로 구현</li>
-            </ul>`,
+                    <li>C# 기반의 BMS 처리 모듈을 별도로 제작<br/>
+                    (BMS에 대한 클래스 정의, 각 노트 오브젝트에 대한 구조 등)</li>
+                    <li>플레이 시작 시간을 기준으로 곡의 재생 시간에 맞추어 노트 위치를 변경시키는 방식으로 구현</li>
+                </ul>`,
             "jp":"",
             "en":""
         },
@@ -225,7 +235,7 @@ const projPersonal = [
         dev: {
             "ko":`<ul>
                 <li>Android의 API로 제공되는 Gesture, Gesture Store를 사용하여 개발</li>
-                <li>Gesture는 Gesture Store에 포함되어 로컬 파일로 저장됨 - 별도 DB는 필요없다</li>
+                <li>Gesture는 Gesture Store에 포함되어 로컬 파일로 저장 - 별도 DB 미사용</li>
                 <li>앱 서랍은 GridLayout으로 표현</li>
             </ul>`,
             "jp":"",

@@ -29,12 +29,6 @@ class FixedTop extends Component<{}, State> {
                 <NavbarBrand></NavbarBrand>
                 <Nav>
                     <NavItem>
-                        <NavLink href="#landing"
-                            className="nav-color">
-                            Home
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
                         <NavLink href="#profile"
                             className="nav-color">
                             About

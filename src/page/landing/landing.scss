@@ -1,10 +1,7 @@
 .bg-landing {
     background: linear-gradient(
-        rgb(30, 35, 41), 
-        rgb(30, 35, 41), 
-        rgba(0, 0, 0, 0.3),
-        rgb(30, 35, 41), 
-        rgb(30, 35, 41)
+        rgb(40, 40, 40),
+        rgb(40, 40, 40)
         ),
         url('./back.jpg');
     background-size: cover;
@@ -14,7 +11,7 @@
 
 .color-land {
     color: white;
-    height: 100vh;
+    padding-top: 100px;
 }
 
 .arrow-down-size {

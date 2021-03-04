@@ -4,26 +4,27 @@ import "./profile.scss";
 
 interface Props {
     title: string,
-    c1t: string,
-    c1c: string,
-    c2t: string,
-    c2c: string
+    cont: Array<any>
 }
 
 class TechStackCard extends Component<Props> {
     render() {
         return (
-            <Card className="text">
+            <Card className="text techcard">
                 <CardHeader className="lv2 profheader">
                     {this.props.title}
                 </CardHeader>
                 <CardBody>
-                    <span className="lv3"><b>{this.props.c1t}</b><br/>
-                        {this.props.c1c}
-                    </span><br/>
-                    <span className="lv3"><b>{this.props.c2t}</b><br/>
-                        {this.props.c2c}
-                    </span>
+                    {
+                        this.props.cont.map(v => {
+                            return (
+                                <span className="lv3">
+                                    <b>{v.title}</b><br/>
+                                    {v.content}<br/>
+                                </span>
+                            )
+                        })
+                    }
                 </CardBody>
             </Card>
         )

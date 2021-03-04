@@ -12,7 +12,7 @@ class Link extends Component {
                         <Col xs="12">
                             <Row className="paragraph">
                                 <ReactWOW animation="slideInLeft">
-                                    <Col className="text text-center" xs="12">
+                                    <Col className="text text-left" xs="12">
                                         <span className="lv1">Links</span>
                                     </Col>
                                 </ReactWOW>

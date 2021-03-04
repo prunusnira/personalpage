@@ -13,21 +13,11 @@ class Landing extends Component {
                     <Row className="color-land flex-center" id="landing">
                         <Col xs="12">
                             <Row className="paragraph">
-                                <ReactWOW animation="fadeInDown">
-                                    <Col className="text text-center" xs="12">
-                                        <span className="lv1">Curiosity,</span><br/>
-                                        <span className="lv1">Solving,</span><br/>
-                                        <span className="lv1">and Evolving.</span><br/>
-                                    </Col>
-                                </ReactWOW>
-                            </Row>
-                            <Row className="paragraph">
-                                <ReactWOW animation="slideInRight" delay="0.1s">
-                                    <Col className="text text-right" xs="12">
-                                        <span className="lv2">Tae Jun Kang</span><br/>
-                                        <span className="lv3">a.k.a. Nira</span><br/>
-                                        <span className="lv3">a developer</span><br/>
-                                        <span className="lv3">a gamer</span><br/>
+                                <ReactWOW animation="fadeInDown" delay="0.5s">
+                                    <Col className="text text-left" xs="12">
+                                        <span className="lv1">Tae Jun Kang</span><br/>
+                                        <span className="lv3">a developer & gamer</span><br/>
+                                        <span className="lv3">contact: tjkang0207@gmail.com</span>
                                     </Col>
                                 </ReactWOW>
                             </Row>

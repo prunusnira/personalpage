@@ -19,7 +19,7 @@ class About extends Component {
                                 <ReactWOW
                                     key="profile1"
                                     animation="slideInLeft">
-                                    <Col className="text text-center" xs="12">
+                                    <Col className="text text-left" xs="12">
                                         <span className="lv1">About</span>
                                     </Col>
                                 </ReactWOW>
@@ -28,18 +28,19 @@ class About extends Component {
                                 <ReactWOW
                                     key="profile2"
                                     animation="slideInLeft">
-                                    <Col className="text text-center" xs="12">
+                                    <Col className="text" xs="12">
                                         <span className="lv2">{(textAbout.para1t as any)[this.lang]}</span><br/>
-                                        <span className="lv3">{(textAbout.para1c as any)[this.lang]}</span>
+                                        <span className="lv3" dangerouslySetInnerHTML={{__html: (textAbout.para1c as any)[this.lang]}}></span>
                                     </Col>
                                 </ReactWOW>
                             </Row>
                             <Row className="paragraph">
                                 <ReactWOW
                                     key="profile3"
-                                    animation="fadeInDown">
+                                    animation="slideInLeft">
                                     <Col className="text" xs="12">
-                                        <span className="lv2">{(textAbout.para2t as any)[this.lang]}</span>
+                                        <span className="lv2">{(textAbout.para2t as any)[this.lang]}</span><br/>
+                                        <span className="lv3">{(textAbout.para2c as any)[this.lang]}</span>
                                     </Col>
                                 </ReactWOW>
                             </Row>
@@ -50,13 +51,10 @@ class About extends Component {
                                             <ReactWOW
                                                 key={"profile4"+i}
                                                 animation="slideInLeft">
-                                                <Col className="techcard text" xs="12" sm="6">
+                                                <Col className="text" sm="12" md="6">
                                                     <TechStackCard
                                                         title={d.title}
-                                                        c1t={d.c1t}
-                                                        c1c={d.c1c}
-                                                        c2t={d.c2t}
-                                                        c2c={d.c2c}
+                                                        cont={d.cont}
                                                     />
                                                 </Col>
                                             </ReactWOW>

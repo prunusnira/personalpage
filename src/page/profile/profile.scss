@@ -1,20 +1,16 @@
 .color-prof {
     background:linear-gradient(
-        rgb(30, 35, 41),
-        rgb(30, 30, 30),
-        rgb(20, 20, 20),
-        rgb(10, 10, 10),
-        rgb(0, 0, 0),
-        rgb(10, 10, 10),
-        rgb(20, 20, 20),
-        rgb(30, 30, 30),
-        rgb(40, 40, 40)
+        rgb(40, 40, 40),
+        rgb(30, 30, 30)
     );
     color: white;
 }
 
 .techcard {
-    padding: 10px;
+    span {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
 
 .profheader {

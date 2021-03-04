@@ -124,16 +124,11 @@ class ProjectPage extends Component<{}, State> {
                         <Col xs="12">
                             <Row className="paragraph">
                                 <ReactWOW animation="slideInLeft">
-                                    <Col className="text text-center" xs="12">
-                                        <span className="lv1">Works</span>
+                                    <Col className="text text-left" xs="12">
+                                        <span className="lv1">Works</span><br/>
+                                        <span className="lv3">Click/Touch to expand</span>
                                     </Col>
                                 </ReactWOW>
-                            </Row>
-
-                            <Row>
-                                <Col className="text-center" xs="12">
-                                    Click/Touch to expand
-                                </Col>
                             </Row>
 
                             <Row>
