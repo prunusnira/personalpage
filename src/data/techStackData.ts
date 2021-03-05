@@ -46,6 +46,19 @@ const techStack=[
         ]
     },
     {
+        title: "DB",
+        cont: [
+            {
+                title: "Tried",
+                content: "MySQL, MariaDB, SQLite, PostgreSQL, AWS DynamoDB",
+            },
+            {
+                title: "Usage Examples",
+                content: "개인 개발한 웹 서비스(MySQL계/DynamoDB), 회사 업무(PostgreSQL), Android 앱 및 Unity(SQLite)"
+            }
+        ]
+    },
+    {
         title: "etc",
         cont: [
             {
