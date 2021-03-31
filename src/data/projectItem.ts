@@ -5,9 +5,7 @@ class ProjectItem {
     platform: string;
     tech: string;
     period: string;
-    link1: string;
-    link2: string;
-    link3: string;
+    link: string[];
     content: string;
     dev: string;
     image: Array<string>;
@@ -19,9 +17,7 @@ class ProjectItem {
         platform: string,
         tech: string,
         period: string,
-        link: string,
-        link2: string,
-        link3: string,
+        link: string[],
         content: string,
         dev: string,
         image: Array<string>) {
@@ -31,9 +27,7 @@ class ProjectItem {
             this.platform = platform;
             this.tech = tech;
             this.period = period;
-            this.link1 = link;
-            this.link2 = link2;
-            this.link3 = link3;
+            this.link = link;
             this.content = content;
             this.dev = dev;
             this.image = image;

@@ -88,39 +88,24 @@ class ProjectListObject extends Component<Props, State> {
                                 </Row>
                                 <Row className="paragraph">
                                     <Col className="text">
-                                        <b>Link 1</b>
-                                        &nbsp;
-                                        <span className="lv3">
-                                            <a
-                                                key="link1"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                href={item.link1}>
-                                                {item.link1}
-                                            </a>
-                                        </span><br/>
-                                        <b>Link 2</b>
-                                        &nbsp;
-                                        <span className="lv3">
-                                            <a
-                                                key="link2"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                href={item.link2}>
-                                                {item.link2}
-                                            </a>
-                                        </span><br/>
-                                        <b>Link 3</b>
-                                        &nbsp;
-                                        <span className="lv3">
-                                            <a
-                                                key="link3"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                href={item.link3}>
-                                                {item.link3}
-                                            </a>
-                                        </span><br/>
+                                        {
+                                            item.link.map((v, i) => {
+                                                return (
+                                                    <Fragment>
+                                                        <b>Link {i+1}</b>
+                                                        &nbsp;
+                                                        <span className="lv3">
+                                                            <a
+                                                                key="link1"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                href={v}>
+                                                                {v}
+                                                            </a>
+                                                        </span><br/>
+                                                    </Fragment>)
+                                            })
+                                        }
                                     </Col>
                                 </Row>
                                 <Row className="paragraph">

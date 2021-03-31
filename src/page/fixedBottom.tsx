@@ -9,7 +9,7 @@ class FixedBottom extends Component {
                     bottom:"10px",
                     right:"10px",
                     textAlign:"right",
-                    color: "grey",
+                    color: "white",
                     fontSize: "80%"
                 }}
             >

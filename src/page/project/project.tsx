@@ -11,6 +11,9 @@ import ReactWOW from 'react-wow';
 
 import './project.scss';
 import ProjectListWrapper from './projectListWrapper';
+import textProject from '../../text/project';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 
 interface State {
     catName: string,
@@ -89,9 +92,7 @@ class ProjectPage extends Component<{}, State> {
             e.platform,
             e.tech,
             e.period,
-            e.link1,
-            e.link2,
-            e.link3,
+            e.link,
             (e.content as any)[this.lang],
             (e.dev as any)[this.lang],
             e.image);
@@ -125,8 +126,13 @@ class ProjectPage extends Component<{}, State> {
                             <Row className="paragraph">
                                 <ReactWOW animation="slideInLeft">
                                     <Col className="text text-left" xs="12">
-                                        <span className="lv1">Works</span><br/>
-                                        <span className="lv3">Click/Touch to expand</span>
+                                        <span className="lv1">
+                                            <FontAwesomeIcon icon={faAngleDoubleRight} />&nbsp;
+                                            Works
+                                        </span><br/>
+                                        <span className="lv2">
+                                            {(textProject.clickToExpand as any)[this.lang]}
+                                        </span>
                                     </Col>
                                 </ReactWOW>
                             </Row>

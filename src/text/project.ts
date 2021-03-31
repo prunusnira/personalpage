@@ -1,4 +1,9 @@
 const textProject = {
+    clickToExpand: {
+        "ko":"각 항목을 클릭해서 펼쳐보세요",
+        "jp":"",
+        "en":"Click to Expand"
+    },
     platform: {
         "ko":"플랫폼",
         "jp":"プラットフォーム",

@@ -1,3 +1,5 @@
+import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import ReactWOW from "react-wow";
 import { Col, Container, Row } from "reactstrap";
@@ -13,7 +15,10 @@ class Link extends Component {
                             <Row className="paragraph">
                                 <ReactWOW animation="slideInLeft">
                                     <Col className="text text-left" xs="12">
-                                        <span className="lv1">Links</span>
+                                        <span className="lv1">
+                                            <FontAwesomeIcon icon={faAngleDoubleRight} />&nbsp;
+                                            Links
+                                        </span>
                                     </Col>
                                 </ReactWOW>
                             </Row>

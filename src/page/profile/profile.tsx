@@ -3,8 +3,10 @@ import { Row, Col, Container } from 'reactstrap';
 import ReactWOW from 'react-wow';
 import "./profile.scss";
 import textAbout from '../../text/about';
+import techStackData from '../../data/techStackData';
 import TechStackCard from './techStackCard';
-import techStack from '../../data/techStackData';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDoubleRight, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 class About extends Component {
     private lang = "ko";
@@ -20,7 +22,10 @@ class About extends Component {
                                     key="profile1"
                                     animation="slideInLeft">
                                     <Col className="text text-left" xs="12">
-                                        <span className="lv1">About</span>
+                                        <span className="lv1">
+                                            <FontAwesomeIcon icon={faAngleDoubleRight} />&nbsp;
+                                            About
+                                        </span>
                                     </Col>
                                 </ReactWOW>
                             </Row>
@@ -29,7 +34,10 @@ class About extends Component {
                                     key="profile2"
                                     animation="slideInLeft">
                                     <Col className="text" xs="12">
-                                        <span className="lv2">{(textAbout.para1t as any)[this.lang]}</span><br/>
+                                        <span className="lv2">
+                                            <FontAwesomeIcon icon={faAngleRight} />&nbsp;
+                                            {(textAbout.para1t as any)[this.lang]}
+                                        </span><br/>
                                         <span className="lv3" dangerouslySetInnerHTML={{__html: (textAbout.para1c as any)[this.lang]}}></span>
                                     </Col>
                                 </ReactWOW>
@@ -39,19 +47,22 @@ class About extends Component {
                                     key="profile3"
                                     animation="slideInLeft">
                                     <Col className="text" xs="12">
-                                        <span className="lv2">{(textAbout.para2t as any)[this.lang]}</span><br/>
+                                        <span className="lv2">
+                                            <FontAwesomeIcon icon={faAngleRight} />&nbsp;
+                                            {(textAbout.para2t as any)[this.lang]}
+                                        </span><br/>
                                         <span className="lv3">{(textAbout.para2c as any)[this.lang]}</span>
                                     </Col>
                                 </ReactWOW>
                             </Row>
                             <Row className="paragraph">
                                 {
-                                    techStack.map((d, i) => {
+                                    techStackData.map((d, i) => {
                                         return (
                                             <ReactWOW
                                                 key={"profile4"+i}
                                                 animation="slideInLeft">
-                                                <Col className="text" sm="12" md="6">
+                                                <Col className="text" sm="12">
                                                     <TechStackCard
                                                         title={d.title}
                                                         cont={d.cont}
@@ -67,7 +78,10 @@ class About extends Component {
                                     key="profile5"
                                     animation="slideInLeft">
                                     <Col className="text" xs="12">
-                                        <span className="lv2">{(textAbout.para3t as any)[this.lang]}</span><br/><br/>
+                                        <span className="lv2">
+                                            <FontAwesomeIcon icon={faAngleRight} />&nbsp;
+                                            {(textAbout.para3t as any)[this.lang]}
+                                        </span><br/><br/>
                                         <span className="lv3"><b>2015.05-2020.05</b><br/>
                                             <span dangerouslySetInnerHTML={
                                                 {__html:(textAbout.para3c1 as any)[this.lang]}
