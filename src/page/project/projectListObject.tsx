@@ -34,10 +34,10 @@ class ProjectListObject extends Component<Props, State> {
         const item = this.props.item;
         return (
             <Fragment>
-                <Row className="projobj-overall">
+                <Row className="projobj-overall text">
                     <Col xs="12">
                         <Row onClick={this.changeOpen}>
-                            <Col xs="2">
+                            <Col xs="2" className="text-center">
                                 <img
                                     alt="icon"
                                     className="projobj-icon"
@@ -45,10 +45,10 @@ class ProjectListObject extends Component<Props, State> {
                             </Col>
                             <Col xs="10">
                                 <Row>
-                                    <Col xs="9" className="projobj-title">
+                                    <Col xs="9" className="lv3">
                                         {item.title}
                                     </Col>
-                                    <Col xs="3">
+                                    <Col xs="3" className="lv4">
                                         {item.platform}
                                     </Col>
                                 </Row>
@@ -73,17 +73,17 @@ class ProjectListObject extends Component<Props, State> {
                                 <Row className="paragraph">
                                     <Col xs="6" className="text">
                                         <b>{(textProject.platform as any)[this.lang]}</b><br/>
-                                        <span className="lv3">{item.platform}</span>
+                                        <span className="lv4">{item.platform}</span>
                                     </Col>
                                     <Col xs="6" className="text">
                                         <b>{(textProject.period as any)[this.lang]}</b><br/>
-                                        <span className="lv3">{item.period}</span>
+                                        <span className="lv4">{item.period}</span>
                                     </Col>
                                 </Row>
                                 <Row className="paragraph">
                                     <Col className="text">
                                         <b>{(textProject.tech as any)[this.lang]}</b><br/>
-                                        <span className="lv3">{item.tech}</span>
+                                        <span className="lv4">{item.tech}</span>
                                     </Col>
                                 </Row>
                                 <Row className="paragraph">
@@ -94,7 +94,7 @@ class ProjectListObject extends Component<Props, State> {
                                                     <Fragment>
                                                         <b>Link {i+1}</b>
                                                         &nbsp;
-                                                        <span className="lv3">
+                                                        <span className="lv4">
                                                             <a
                                                                 key="link1"
                                                                 target="_blank"
@@ -110,20 +110,20 @@ class ProjectListObject extends Component<Props, State> {
                                 </Row>
                                 <Row className="paragraph">
                                     <Col className="text">
-                                        <span className="lv3" dangerouslySetInnerHTML={{__html:item.content}}></span>
+                                        <span className="lv4" dangerouslySetInnerHTML={{__html:item.content}}></span>
                                     </Col>
                                 </Row>
                                 <Row className="paragraph">
                                     <Col className="text">
                                         <b>{(textProject.dev as any)[this.lang]}</b><br/>
-                                        <span className="lv3" dangerouslySetInnerHTML={{__html:item.dev}}></span>
+                                        <span className="lv4" dangerouslySetInnerHTML={{__html:item.dev}}></span>
                                     </Col>
                                 </Row>
                                 <Row className="paragraph">
                                     <Col className="text">
                                         <b>Images</b><br/>
-                                        <span className="lv3">Click to open in the new tab</span><br/>
-                                        <span className="lv3">
+                                        <span className="lv4">Click to open in the new tab</span><br/>
+                                        <span className="lv4">
                                             {
                                                 item.image.map((e) => {
                                                     const imgUrl = process.env.PUBLIC_URL+"/img"+e;

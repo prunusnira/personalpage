@@ -22,7 +22,7 @@ class About extends Component {
                                     key="profile1"
                                     animation="slideInLeft">
                                     <Col className="text text-left" xs="12">
-                                        <span className="lv1">
+                                        <span className="lv2">
                                             <FontAwesomeIcon icon={faAngleDoubleRight} />&nbsp;
                                             About
                                         </span>
@@ -34,11 +34,11 @@ class About extends Component {
                                     key="profile2"
                                     animation="slideInLeft">
                                     <Col className="text" xs="12">
-                                        <span className="lv2">
+                                        <span className="lv3">
                                             <FontAwesomeIcon icon={faAngleRight} />&nbsp;
                                             {(textAbout.para1t as any)[this.lang]}
                                         </span><br/>
-                                        <span className="lv3" dangerouslySetInnerHTML={{__html: (textAbout.para1c as any)[this.lang]}}></span>
+                                        <span className="lv4" dangerouslySetInnerHTML={{__html: (textAbout.para1c as any)[this.lang]}}></span>
                                     </Col>
                                 </ReactWOW>
                             </Row>
@@ -47,11 +47,11 @@ class About extends Component {
                                     key="profile3"
                                     animation="slideInLeft">
                                     <Col className="text" xs="12">
-                                        <span className="lv2">
+                                        <span className="lv3">
                                             <FontAwesomeIcon icon={faAngleRight} />&nbsp;
                                             {(textAbout.para2t as any)[this.lang]}
                                         </span><br/>
-                                        <span className="lv3">{(textAbout.para2c as any)[this.lang]}</span>
+                                        <span className="lv4">{(textAbout.para2c as any)[this.lang]}</span>
                                     </Col>
                                 </ReactWOW>
                             </Row>
@@ -78,16 +78,16 @@ class About extends Component {
                                     key="profile5"
                                     animation="slideInLeft">
                                     <Col className="text" xs="12">
-                                        <span className="lv2">
+                                        <span className="lv3">
                                             <FontAwesomeIcon icon={faAngleRight} />&nbsp;
                                             {(textAbout.para3t as any)[this.lang]}
                                         </span><br/><br/>
-                                        <span className="lv3"><b>2015.05-2020.05</b><br/>
+                                        <span className="lv4"><b>2015.05-2020.05</b><br/>
                                             <span dangerouslySetInnerHTML={
                                                 {__html:(textAbout.para3c1 as any)[this.lang]}
                                             }></span>
                                         </span><br/><br/>
-                                        <span className="lv3"><b>2013.03-2015.02</b><br/>
+                                        <span className="lv4"><b>2013.03-2015.02</b><br/>
                                             <span dangerouslySetInnerHTML={
                                                 {__html:(textAbout.para3c2 as any)[this.lang]}
                                             }></span>

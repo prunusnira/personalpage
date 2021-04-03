@@ -27,7 +27,7 @@ const techStackData: TechStackWrap[] = [
                     { img: "/img/about/nginx.png", name: "NGINX" },
                     { img: "/img/about/letsencrypt.png", name: "CertBot" }
                 ],
-                desc: "* AWS는 S3, Lambda, DynamoDB, CloudFront, API Gateway, Lightsail를 경험해보았습니다"
+                desc: "* AWS는 S3, Lambda, DynamoDB, CloudFront, API Gateway, Lightsail를 개인 프로젝트에 사용해보았습니다"
             },
             {
                 title: "Usage Examples",

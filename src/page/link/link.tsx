@@ -15,7 +15,7 @@ class Link extends Component {
                             <Row className="paragraph">
                                 <ReactWOW animation="slideInLeft">
                                     <Col className="text text-left" xs="12">
-                                        <span className="lv1">
+                                        <span className="lv2">
                                             <FontAwesomeIcon icon={faAngleDoubleRight} />&nbsp;
                                             Links
                                         </span>
@@ -24,14 +24,14 @@ class Link extends Component {
                             </Row>
                             <Row className="paragraph">
                                 <ReactWOW animation="slideInLeft">
-                                    <Col xs="12">
+                                    <Col xs="12 text">
                                         <Row>
-                                            <Col xs="12" className="linktext">
+                                            <Col xs="12 lv3" className="linktext">
                                                 <b>- Blog</b>
                                             </Col>
                                         </Row>
                                         <Row className="linkpadding">
-                                            <Col xs="12">
+                                            <Col xs="12 lv4">
                                                 <a
                                                     target="_blank"
                                                     rel="noopener noreferrer"
@@ -40,12 +40,12 @@ class Link extends Component {
                                             </Col>
                                         </Row>
                                         <Row>
-                                            <Col xs="12" className="linktext">
+                                            <Col xs="12 lv3" className="linktext">
                                                 <b>- GitHub</b>
                                             </Col>
                                         </Row>
                                         <Row className="linkpadding">
-                                            <Col xs="12">
+                                            <Col xs="12 lv4">
                                                 <a
                                                     target="_blank"
                                                     rel="noopener noreferrer"
@@ -54,12 +54,12 @@ class Link extends Component {
                                             </Col>
                                         </Row>
                                         <Row>
-                                            <Col xs="12" className="linktext">
+                                            <Col xs="12 lv3" className="linktext">
                                                 <b>- Skill Navigator</b>
                                             </Col>
                                         </Row>
                                         <Row className="linkpadding">
-                                            <Col xs="12">
+                                            <Col xs="12 lv4">
                                                 <a
                                                     target="_blank"
                                                     rel="noopener noreferrer"
@@ -68,12 +68,12 @@ class Link extends Component {
                                             </Col>
                                         </Row>
                                         <Row>
-                                            <Col xs="12" className="linktext">
-                                                <b>- PIU Manager</b>
+                                            <Col xs="12 lv3" className="linktext">
+                                                <b>- PIU Clear Manager</b>
                                             </Col>
                                         </Row>
                                         <Row className="linkpadding">
-                                            <Col xs="12">
+                                            <Col xs="12 lv4">
                                                 <a
                                                     target="_blank"
                                                     rel="noopener noreferrer"
@@ -82,12 +82,12 @@ class Link extends Component {
                                             </Col>
                                         </Row>
                                         <Row>
-                                            <Col xs="12" className="linktext">
+                                            <Col xs="12 lv3" className="linktext">
                                                 <b>- Twitch BanPicker</b>
                                             </Col>
                                         </Row>
                                         <Row className="linkpadding">
-                                            <Col xs="12">
+                                            <Col xs="12 lv4">
                                                 <a
                                                     target="_blank"
                                                     rel="noopener noreferrer"

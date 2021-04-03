@@ -16,8 +16,8 @@ class Landing extends Component {
                                 <ReactWOW animation="fadeInDown" delay="0.5s">
                                     <Col className="text text-left" xs="12">
                                         <span className="lv1">Tae Jun Kang</span><br/>
-                                        <span className="lv3">a developer & gamer</span><br/>
-                                        <span className="lv3">contact: tjkang0207@gmail.com</span>
+                                        <span className="lv4">a developer & gamer</span><br/>
+                                        <span className="lv4">contact: tjkang0207@gmail.com</span>
                                     </Col>
                                 </ReactWOW>
                             </Row>

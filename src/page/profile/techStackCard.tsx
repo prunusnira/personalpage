@@ -11,7 +11,7 @@ interface Props {
 const TechStackCard: React.FC<Props> = ({title, cont}) => {
     return (
         <Card className="text techcard">
-            <CardHeader className="lv2 cardheader">
+            <CardHeader className="lv3 cardheader">
                 {title}
             </CardHeader>
             <CardBody className="cardbody">
@@ -19,20 +19,20 @@ const TechStackCard: React.FC<Props> = ({title, cont}) => {
                     cont.map(v => {
                         return (
                         <Fragment>
-                            <span className="lv3"><b>{v.title}</b></span><br/>
+                            <span className="lv4"><b>{v.title}</b></span><br/>
                             <Row>
                                 {
                                     v.cont.map(x => {
                                         return (
-                                            <Col xs="4" sm="2" className="text-center">
+                                            <Col xs="6" md="4" lg="3" className="text-center">
                                                 <Row>
-                                                    <Col xs="12">
+                                                    <Col xs="2">
                                                         <img
                                                             alt="js"
-                                                            height="50px"
+                                                            height="25px"
                                                             src={process.env.PUBLIC_URL+x.img} />
                                                     </Col>
-                                                    <Col xs="12">{x.name}<br/>&nbsp;</Col>
+                                                    <Col xs="10" className="text-left">{x.name}</Col>
                                                 </Row>
                                             </Col>)
                                     })
@@ -40,7 +40,12 @@ const TechStackCard: React.FC<Props> = ({title, cont}) => {
                             </Row>
                             <Row>
                                 <Col xs="12">
-                                    {v.desc}<br/>&nbsp;
+                                    {v.desc}
+                                    {
+                                        (function() {
+                                            if(v.desc.length > 0) return (<><br/>&nbsp;</>)
+                                        })()
+                                    }
                                 </Col>
                             </Row>
                         </Fragment>)

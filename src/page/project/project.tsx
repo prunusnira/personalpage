@@ -126,11 +126,11 @@ class ProjectPage extends Component<{}, State> {
                             <Row className="paragraph">
                                 <ReactWOW animation="slideInLeft">
                                     <Col className="text text-left" xs="12">
-                                        <span className="lv1">
+                                        <span className="lv2">
                                             <FontAwesomeIcon icon={faAngleDoubleRight} />&nbsp;
                                             Works
                                         </span><br/>
-                                        <span className="lv2">
+                                        <span className="lv4">
                                             {(textProject.clickToExpand as any)[this.lang]}
                                         </span>
                                     </Col>
