@@ -51,7 +51,7 @@ const techStackData: TechStackWrap[] = [
             {
                 title: "Usage Examples",
                 cont: [],
-                desc: "웹 서비스용 앱 개발 (총 2종, 2020), 개인 앱 개발 및 PlayStore 게시(2013~)"
+                desc: "웹 서비스용 앱 개발 (총 2종, 2020), 개인 앱 개발 및 PlayStore 게시(2011~)"
             }
         ]
     },

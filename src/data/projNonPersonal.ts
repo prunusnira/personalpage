@@ -11,7 +11,7 @@ const projNonPersonal = [
             "jp":"",
             "en":""
         },
-        platform: "Android / Web",
+        platform: "Web, Android",
         tech: "Android (Kotlin), ReactJS (TypeScript), Bootstrap, NGINX, Spring Boot, MariaDB",
         period: "2019.10-2020.02",
         link: ["https://chatapp.crosscert.com"],

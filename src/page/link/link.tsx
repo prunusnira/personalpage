@@ -83,7 +83,7 @@ class Link extends Component {
                                         </Row>
                                         <Row>
                                             <Col xs="12 lv3" className="linktext">
-                                                <b>- Twitch BanPicker</b>
+                                                <b>- Twitch BanPicker (Twitch login needed)</b>
                                             </Col>
                                         </Row>
                                         <Row className="linkpadding">
