@@ -29,7 +29,6 @@ const projPersonal = [
         },
         dev: {
             "ko":`<ol>
-                    <li>React 17 기반의 CRA로 개발</li>
                     <li>Twitch API로 채널 내 시청자들의 채팅 내용을 읽어 분석하고, 자체 명령어를 기반으로 동작을 수행</li>
                     <li>AWS S3에 데이터를 올리고 CloudFront로 SSL을 지원하는 방식으로 배포</li>
                     <li>저장이 필요한 데이터는 redux-persist를 사용</li>
@@ -120,7 +119,7 @@ const projPersonal = [
             "ko":`Backend<br/>
                 <ul>
                     <li>1세대: NodeJS, NGINX, MariaDB</li>
-                    <li>2세대: AWS Lambda, AWS S3, AWS DynamoDB</li>
+                    <li>2세대: AWS Lambda, AWS S3, MariaDB</li>
                 </ul>
                 Front<br/>
                 <ul>

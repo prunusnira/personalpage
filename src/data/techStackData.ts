@@ -27,7 +27,7 @@ const techStackData: TechStackWrap[] = [
                     { img: "/img/about/nginx.png", name: "NGINX" },
                     { img: "/img/about/letsencrypt.png", name: "CertBot" }
                 ],
-                desc: "* AWS는 S3, Lambda, DynamoDB, CloudFront, API Gateway, Lightsail를 개인 프로젝트에 사용해보았습니다"
+                desc: "* AWS는 S3, Lambda, CloudFront, API Gateway, Lightsail, DynamoDB를 개인 프로젝트에 사용해보았습니다"
             },
             {
                 title: "Usage Examples",
@@ -82,14 +82,13 @@ const techStackData: TechStackWrap[] = [
                     { img: "/img/about/mariadb.png", name: "MariaDB" },
                     { img: "/img/about/sqlite.png", name: "SQLite" },
                     { img: "/img/about/postgresql.png", name: "PostgreSQL" },
-                    { img: "/img/about/dynamodb.png", name: "AWS DynamoDB" },
                 ],
                 desc: ""
             },
             {
                 title: "Usage Examples",
                 cont: [],
-                desc: "개인 개발한 웹 서비스(MySQL계/DynamoDB), 회사 업무(PostgreSQL), Android 앱 및 Unity(SQLite)"
+                desc: "DB를 사용하는 서비스 전반적으로 RDBMS를 사용"
             }
         ]
     },

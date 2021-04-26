@@ -8,20 +8,18 @@ import ProjectPage from './project/project';
 import Experience from './experience';
 import Link from './link/link';
 
-class Index extends Component {
-    render() {
-        return (
-            <Fragment>
-                <FixedTop />
-                <Landing />
-                <About />
-                <ProjectPage />
-                <Experience />
-                <Link />
-                <FixedBottom />
-            </Fragment>
-        )
-    }
+const Index = () => {
+    return (
+        <Fragment>
+            <FixedTop />
+            <Landing />
+            <About />
+            <ProjectPage />
+            <Experience />
+            <Link />
+            <FixedBottom />
+        </Fragment>
+    );
 }
 
 export default Index;
