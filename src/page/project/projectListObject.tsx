@@ -1,66 +1,50 @@
-import React, { Component, Fragment } from "react";
-import { Card, CardBody, Col, Row } from "reactstrap";
-import ProjectItem from "../../data/projectItem";
-import textProject from "../../text/project";
-import Language from "../../tool/language";
+import React, { useState } from "react"
+import ProjectItem from "../../data/projectItem"
+import { BodyContent, ItemCol, ItemRow } from "../../styled/styledCommon"
+import textProject from "../../text/project"
+import Language from "../../tool/language"
 
 interface Props {
     item: ProjectItem
 }
 
-interface State {
-    isOpen: boolean
-}
+const ProjectListObject = (props: Props) => {
+    const [isOpen, setOpen] = useState(false)
+    const lang = Language.getLang()
 
-class ProjectListObject extends Component<Props, State> {
-    private lang = Language.getLang();
-
-    constructor(props: Props) {
-        super(props);
-        this.changeOpen = this.changeOpen.bind(this);
+    const changeOpen = () => {
+        setOpen(!isOpen)
     }
 
-    state: State = {
-        isOpen: false
-    }
-
-    changeOpen = () => {
-        this.setState({
-            isOpen: !this.state.isOpen
-        })
-    }
-
-    render = () => {
-        const item = this.props.item;
-        return (
-            <Fragment>
-                <Row className="projobj-overall text">
-                    <Col xs="12">
-                        <Row onClick={this.changeOpen}>
-                            <Col xs="2" className="text-center">
-                                <img
-                                    alt="icon"
-                                    className="projobj-icon"
-                                    src={process.env.PUBLIC_URL+"/img"+item.icon} />
-                            </Col>
-                            <Col xs="10">
-                                <Row>
-                                    <Col xs="9" className="lv3">
-                                        {item.title}
-                                    </Col>
-                                    <Col xs="3" className="lv4">
-                                        {item.platform}
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col xs="12">
-                                        {item.simpledesc}
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </Row>
-                        <Card style={
-                            this.state.isOpen?
+    return (
+        <>
+            <ItemRow className="projobj-overall text">
+                <ItemCol size={10}>
+                    <ItemRow onClick={changeOpen} keepDirHor={true}>
+                        <ItemCol size={2} className="text-center">
+                            <img
+                                alt="icon"
+                                className="projobj-icon"
+                                src={`${process.env.PUBLIC_URL}/img${props.item.icon}`} />
+                        </ItemCol>
+                        <ItemCol size={8}>
+                            <ItemRow keepDirHor={true}>
+                                <ItemCol size={8} className="lv3">
+                                    {props.item.title}
+                                </ItemCol>
+                                <ItemCol size={2} className="lv4">
+                                    {props.item.platform}
+                                </ItemCol>
+                            </ItemRow>
+                            <ItemRow>
+                                {props.item.simpledesc}
+                            </ItemRow>
+                        </ItemCol>
+                    </ItemRow>
+                    <BodyContent
+                        className="projcard"
+                        style={
+                            isOpen?
                             {
                                 display: "block"
                             }
@@ -69,90 +53,87 @@ class ProjectListObject extends Component<Props, State> {
                                 display: "none"
                             }
                         }>
-                            <CardBody className="projcard">
-                                <Row className="paragraph">
-                                    <Col xs="6" className="text">
-                                        <b>{(textProject.platform as any)[this.lang]}</b><br/>
-                                        <span className="lv4">{item.platform}</span>
-                                    </Col>
-                                    <Col xs="6" className="text">
-                                        <b>{(textProject.period as any)[this.lang]}</b><br/>
-                                        <span className="lv4">{item.period}</span>
-                                    </Col>
-                                </Row>
-                                <Row className="paragraph">
-                                    <Col className="text">
-                                        <b>{(textProject.tech as any)[this.lang]}</b><br/>
-                                        <span className="lv4">{item.tech}</span>
-                                    </Col>
-                                </Row>
-                                <Row className="paragraph">
-                                    <Col className="text">
-                                        {
-                                            item.link.map((v, i) => {
-                                                return (
-                                                    <Fragment>
-                                                        <b>Link {i+1}</b>
-                                                        &nbsp;
-                                                        <span className="lv4">
-                                                            <a
-                                                                key="link1"
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                href={v}>
-                                                                {v}
-                                                            </a>
-                                                        </span><br/>
-                                                    </Fragment>)
-                                            })
-                                        }
-                                    </Col>
-                                </Row>
-                                <Row className="paragraph">
-                                    <Col className="text">
-                                        <span className="lv4" dangerouslySetInnerHTML={{__html:item.content}}></span>
-                                    </Col>
-                                </Row>
-                                <Row className="paragraph">
-                                    <Col className="text">
-                                        <b>{(textProject.dev as any)[this.lang]}</b><br/>
-                                        <span className="lv4" dangerouslySetInnerHTML={{__html:item.dev}}></span>
-                                    </Col>
-                                </Row>
-                                <Row className="paragraph">
-                                    <Col className="text">
-                                        <b>Images</b><br/>
-                                        <span className="lv4">Click to open in the new tab</span><br/>
-                                        <span className="lv4">
-                                            {
-                                                item.image.map((e) => {
-                                                    const imgUrl = process.env.PUBLIC_URL+"/img"+e;
-                                                    return (
-                                                        <a
-                                                            key={e}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            href={imgUrl}>
-                                                            <img alt="" className="projobj-image" src={imgUrl}/>
-                                                        </a>
-                                                    )
-                                                })
-                                            }
-                                        </span>
-                                    </Col>
-                                </Row>
-                                <Row onClick={this.changeOpen}>
-                                    <Col xs="12" className="text-center">
-                                        <a href="#no_div">▲ CLOSE ▲</a>
-                                    </Col>
-                                </Row>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                </Row>
-            </Fragment>
-        );
-    }
+                        <ItemRow className="paragraph">
+                            <ItemCol size={5} className="text">
+                                <b>{(textProject.platform as any)[lang]}</b><br/>
+                                <span className="lv4">{props.item.platform}</span>
+                            </ItemCol>
+                            <ItemCol size={5} className="text">
+                                <b>{(textProject.period as any)[lang]}</b><br/>
+                                <span className="lv4">{props.item.period}</span>
+                            </ItemCol>
+                        </ItemRow>
+                        <ItemRow className="paragraph">
+                            <ItemCol className="text">
+                                <b>{(textProject.tech as any)[lang]}</b><br/>
+                                <span className="lv4">{props.item.tech}</span>
+                            </ItemCol>
+                        </ItemRow>
+                        <ItemRow className="paragraph">
+                            <ItemCol className="text">
+                                {
+                                    props.item.link.map((v, i) => {
+                                        return (
+                                            <>
+                                                <b>Link {i+1}</b>
+                                                &nbsp;
+                                                <span className="lv4">
+                                                    <a
+                                                        key="link1"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        href={v}>
+                                                        {v}
+                                                    </a>
+                                                </span><br/>
+                                            </>)
+                                    })
+                                }
+                            </ItemCol>
+                        </ItemRow>
+                        <ItemRow className="paragraph">
+                            <ItemCol className="text">
+                                <span className="lv4" dangerouslySetInnerHTML={{__html: props.item.content}}></span>
+                            </ItemCol>
+                        </ItemRow>
+                        <ItemRow className="paragraph">
+                            <ItemCol className="text">
+                                <b>{(textProject.dev as any)[lang]}</b><br/>
+                                <span className="lv4" dangerouslySetInnerHTML={{__html: props.item.dev}}></span>
+                            </ItemCol>
+                        </ItemRow>
+                        <ItemRow className="paragraph">
+                            <ItemCol className="text">
+                                <b>Images</b><br/>
+                                <span className="lv4">Click to open in the new tab</span><br/>
+                                <span className="lv4">
+                                    {
+                                        props.item.image.map((e) => {
+                                            const imgUrl = process.env.PUBLIC_URL+"/img"+e;
+                                            return (
+                                                <a
+                                                    key={e}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    href={imgUrl}>
+                                                    <img alt="" className="projobj-image" src={imgUrl}/>
+                                                </a>
+                                            )
+                                        })
+                                    }
+                                </span>
+                            </ItemCol>
+                        </ItemRow>
+                        <ItemRow onClick={changeOpen}>
+                            <ItemCol size={10} className="text-center">
+                                <a href="#no_div">▲ CLOSE ▲</a>
+                            </ItemCol>
+                        </ItemRow>
+                    </BodyContent>
+                </ItemCol>
+            </ItemRow>
+        </>
+    )
 }
 
-export default ProjectListObject;
+export default ProjectListObject

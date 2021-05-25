@@ -1,186 +1,150 @@
-import React, {Component} from 'react';
-import { Col, Row, Container, Nav, NavItem, TabContent, TabPane, NavLink } from 'reactstrap';
+import React, {useEffect, useState} from 'react'
 
-import ProjectItem from '../../data/projectItem';
+import ProjectItem from '../../data/projectItem'
 
-import projPersonal from '../../data/projPersonal';
-import projNonPersonal from '../../data/projNonPersonal';
+import projPersonal from '../../data/projPersonal'
+import projNonPersonal from '../../data/projNonPersonal'
 
-import Language from '../../tool/language';
-import ReactWOW from 'react-wow';
+import Language from '../../tool/language'
+import ReactWOW from 'react-wow'
 
-import './project.scss';
-import ProjectListWrapper from './projectListWrapper';
-import textProject from '../../text/project';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
+import './project.scss'
+import ProjectListWrapper from './projectListWrapper'
+import textProject from '../../text/project'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
+import { Container, ItemCol, ItemRow } from '../../styled/styledCommon'
+import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap'
 
-interface State {
-    catName: string,
-    catSize: number,
-    catList: Array<ProjectItem>,
-    ppList: Array<ProjectItem>,
-    npList: Array<ProjectItem>,
-    catCurNum: number,
-    catPage: number
-}
+const ProjectPage = () => {
+    const [catName, setCatName] = useState('')
+    const [catSize, setCatSize] = useState(0)
+    const [catList, setCatList] = useState(new Array<ProjectItem>())
+    const [ppList, setPPList] = useState(new Array<ProjectItem>())
+    const [npList, setNPList] = useState(new Array<ProjectItem>())
+    const [catCurNum, setCatNum] = useState(0)
+    const [catPage, setCatPage] = useState(0)
 
-class ProjectPage extends Component<{}, State> {
-    private lang: string = Language.getLang();
+    const lang: string = Language.getLang();
 
-    constructor(props: {}) {
-        super(props);
-        this.updateCatNum = this.updateCatNum.bind(this);
-        this.moveProject = this.moveProject.bind(this);
-    }
-
-    state: State = {
-        catName: "",
-        catSize: 0,
-        catList: Array<ProjectItem>(),
-        ppList: Array<ProjectItem>(),
-        npList: Array<ProjectItem>(),
-        catCurNum: 0,
-        catPage: 0
-    }
-
-    componentDidMount() {
-        this.loadProjectList("projPersonal");
-    }
+    useEffect(() => {
+        loadProjectList("projPersonal")
+    }, [])
 
     // 리스트를 현재 선택한 것만으로 변경함
-    loadProjectList(moduleName: string) {
+    const loadProjectList = (moduleName: string) => {
         // 작업 전에 현재 페이지 번호를 초기화
-        this.updateCatNum(0);
+        setCatNum(0);
 
         let m = null;
         switch(moduleName) {
             case "projPersonal":
-                m = projPersonal;
-                break;
+                m = projPersonal
+                break
             case "projNonPersonal":
-                m = projNonPersonal;
-                break;
+                m = projNonPersonal
+                break
         }
 
         if(m != null) {
-            const size = m.length;
-            const plist = Array<ProjectItem>();
-            const nlist = Array<ProjectItem>();
+            const size = m.length
+            const plist = Array<ProjectItem>()
+            const nlist = Array<ProjectItem>()
 
             projPersonal.forEach(e => {
-                plist.push(this.generateItemObject(e));
-            });
+                plist.push(generateItemObject(e))
+            })
             projNonPersonal.forEach(e => {
-                nlist.push(this.generateItemObject(e));
-            });
+                nlist.push(generateItemObject(e))
+            })
 
-            this.setState({
-                catName: moduleName,
-                catSize: size,
-                ppList: plist,
-                npList: nlist
-            });
+            setCatName(moduleName)
+            setCatSize(size)
+            setPPList(plist)
+            setNPList(nlist)
         }
     }
 
-    generateItemObject(e: any) {
+    const generateItemObject = (e: any) => {
         return new ProjectItem(
             e.icon,
-            (e.title as any)[this.lang],
-            (e.simpledesc as any)[this.lang],
+            (e.title as any)[lang],
+            (e.simpledesc as any)[lang],
             e.platform,
             e.tech,
             e.period,
             e.link,
-            (e.content as any)[this.lang],
-            (e.dev as any)[this.lang],
-            e.image);
+            (e.content as any)[lang],
+            (e.dev as any)[lang],
+            e.image)
     }
 
-    updateCatNum(num: number) {
-        this.setState({
-            catCurNum: num
-        });
+    const moveProject = (idx: number) => {
+        let nextidx: number
+
+        if(idx > catSize - 1) nextidx = catSize - 1
+        else if(idx < 0) nextidx = 0
+        else nextidx = idx
+
+        setCatNum(nextidx)
     }
 
-    moveProject(idx: number) {
-        const catlen = this.state.catSize;
-        let nextidx: number;
+    return (
+        <Container className='bgcolor'>
+            <ItemRow className="h100" id="works">
+                <ItemCol size={10}>
+                    <ItemRow className="paragraph">
+                        <ReactWOW animation="slideInLeft">
+                            <ItemCol className="text text-left" size={10}>
+                                <span className="lv2">
+                                    <FontAwesomeIcon icon={faAngleDoubleRight} />&nbsp;
+                                    Works
+                                </span><br/>
+                                <span className="lv4">
+                                    {(textProject.clickToExpand as any)[lang]}
+                                </span>
+                            </ItemCol>
+                        </ReactWOW>
+                    </ItemRow>
 
-        if(idx > catlen - 1) nextidx = catlen - 1;
-        else if(idx < 0) nextidx = 0;
-        else nextidx = idx;
-
-        this.setState({
-            catCurNum: nextidx
-        });
-    }
-
-    render() {
-        return (
-            <div className="color-proj">
-                <Container>
-                    <Row className="h100" id="works">
-                        <Col xs="12">
-                            <Row className="paragraph">
-                                <ReactWOW animation="slideInLeft">
-                                    <Col className="text text-left" xs="12">
-                                        <span className="lv2">
-                                            <FontAwesomeIcon icon={faAngleDoubleRight} />&nbsp;
-                                            Works
-                                        </span><br/>
-                                        <span className="lv4">
-                                            {(textProject.clickToExpand as any)[this.lang]}
-                                        </span>
-                                    </Col>
-                                </ReactWOW>
-                            </Row>
-
-                            <Row>
-                                <ReactWOW animation="slideInLeft">
-                                    <Col xs="12">
-                                        <Nav tabs>
-                                            <NavItem>
-                                                <NavLink
-                                                    className={(this.state.catPage === 0 ? "active":"")}
-                                                    onClick={() => {
-                                                    this.setState({
-                                                        catPage: 0
-                                                    });
-                                                }}>
-                                                    Personal Work
-                                                </NavLink>
-                                            </NavItem>
-                                            <NavItem>
-                                                <NavLink
-                                                    className={(this.state.catPage === 1 ? "active":"")}
-                                                    onClick={() => {
-                                                    this.setState({
-                                                        catPage: 1
-                                                    });
-                                                }}>
-                                                    Non-Personal Work
-                                                </NavLink>
-                                            </NavItem>
-                                        </Nav>
-                                        <TabContent activeTab={this.state.catPage}>
-                                            <TabPane tabId={0}>
-                                                <ProjectListWrapper list={this.state.ppList}/>
-                                            </TabPane>
-                                            <TabPane tabId={1}>
-                                                <ProjectListWrapper list={this.state.npList}/>
-                                            </TabPane>
-                                        </TabContent>
-                                    </Col>
-                                </ReactWOW>
-                            </Row>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-        )
-    }
+                    <ItemRow>
+                        <ReactWOW animation="slideInLeft">
+                            <ItemCol size={10}>
+                                <Nav tabs>
+                                    <NavItem>
+                                        <NavLink
+                                            className={(catPage === 0 ? "active":"")}
+                                            onClick={() => {
+                                                setCatPage(0)
+                                        }}>
+                                            Personal Work
+                                        </NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink
+                                            className={(catPage === 1 ? "active":"")}
+                                            onClick={() => {
+                                                setCatPage(1)
+                                        }}>
+                                            Non-Personal Work
+                                        </NavLink>
+                                    </NavItem>
+                                </Nav>
+                                <TabContent activeTab={catPage}>
+                                    <TabPane tabId={0}>
+                                        <ProjectListWrapper list={ppList}/>
+                                    </TabPane>
+                                    <TabPane tabId={1}>
+                                        <ProjectListWrapper list={npList}/>
+                                    </TabPane>
+                                </TabContent>
+                            </ItemCol>
+                        </ReactWOW>
+                    </ItemRow>
+                </ItemCol>
+            </ItemRow>
+        </Container>
+    )
 }
 
-export default ProjectPage;
+export default ProjectPage

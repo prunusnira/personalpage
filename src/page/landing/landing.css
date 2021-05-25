@@ -1,0 +1,9 @@
+.arrow-down-size {
+    font-size: 250%;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,17 +1,4 @@
-.color-prof {
-    background:linear-gradient(
-        rgb(40, 40, 40),
-        rgb(30, 30, 30)
-    );
-    color: white;
-}
 
-.techcard {
-    span {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-}
 
 .cardheader {
     background: linear-gradient(
