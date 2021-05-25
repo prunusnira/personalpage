@@ -1,6 +1,7 @@
 class Language {
     static getLang(): string {
-        let lang = navigator.language;// || navigator.systemLanguage;
+        return 'ko'
+        /*let lang = navigator.language;// || navigator.systemLanguage;
         if(this.readCookie("lang") !== null &&
             (this.readCookie("lang") === 'ko' || this.readCookie("lang") === 'jp' || this.readCookie("lang") === 'en')
         ) {
@@ -20,7 +21,7 @@ class Language {
             this.eraseCookie("lang");
             this.createCookie("lang", lang, 1);
         }
-        return lang;
+        return lang;*/
     }
 
     static changeLang(type: string) {
