@@ -14,7 +14,7 @@ class FixedBottom extends Component {
                 }}
             >
                 (c) 2020 Prunus Nira<br/>
-                Hosted on github.io
+                Hosted on github.io, Created with ReactJS, styled-components
             </footer>
         )
     }

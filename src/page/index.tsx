@@ -1,24 +1,30 @@
-import React, {Component, Fragment} from 'react';
+import React from 'react'
+import {BrowserRouter, Route} from 'react-router-dom'
 
-import Landing from './landing/landing';
-import FixedTop from './fixedTop';
-import FixedBottom from './fixedBottom';
-import About from './profile/profile';
-import ProjectPage from './project/project';
-import Experience from './experience';
-import Link from './link/link';
+import Landing from './landing/landing'
+import FixedTop from './fixedTop'
+import FixedBottom from './fixedBottom'
+import About from './about/about'
+import ProjectPage from './project/project'
+import Link from './link/link'
+import TechStack from './techStack/techStack'
+import { Center, OuterBox } from '../styled/styledOverall'
 
 const Index = () => {
     return (
-        <Fragment>
-            <FixedTop />
-            <Landing />
-            <About />
-            <ProjectPage />
-            <Experience />
-            <Link />
-            <FixedBottom />
-        </Fragment>
+        <BrowserRouter>
+            <OuterBox className='bgcolor'>
+                <FixedTop />
+                <Center>
+                    <Route exact path='/' component={Landing} />
+                    <Route path='/about' component={About} />
+                    <Route path='/tech' component={TechStack} />
+                    <Route path='/project' component={ProjectPage} />
+                    <Route path='/link' component={Link} />
+                </Center>
+                <FixedBottom />
+            </OuterBox>
+        </BrowserRouter>
     );
 }
 

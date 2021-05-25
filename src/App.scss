@@ -57,3 +57,11 @@
 .card {
     color: black;
 }
+
+.bgcolor {
+    background:linear-gradient(
+        rgb(40, 40, 40),
+        rgb(30, 30, 30)
+    );
+    color: white;
+}

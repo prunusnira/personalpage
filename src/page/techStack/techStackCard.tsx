@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import { Card, CardHeader, CardBody, Row, Col } from 'reactstrap';
 import { TechStackInner } from '../../data/TechStackInner';
-import "./profile.scss";
+import "./tech.css";
 
 interface Props {
     title: string,
