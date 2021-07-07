@@ -98,7 +98,7 @@ const ProjectPage = () => {
                             <ItemCol className="text text-left" size={10}>
                                 <span className="lv2">
                                     <FontAwesomeIcon icon={faAngleDoubleRight} />&nbsp;
-                                    Works
+                                    Project
                                 </span><br/>
                                 <span className="lv4">
                                     {(textProject.clickToExpand as any)[lang]}

@@ -88,6 +88,15 @@ export const ButtonSM = styled.button`
     background-color: #dddddd;
 `
 
+const MainBtnBase = styled.button<{bgColor: string, txtColor: string}>`
+    background-color: ${props => props.bgColor};
+    color: ${props => props.txtColor};
+    width: 100%;
+    height: 100%;
+`
+
+export const MainBtn = defaultStyle(MainBtnBase, { bgColor: '#dddddd', color: 'black' })
+
 const IconBase = styled.img<{sizeType: string}>`
     ${props => `${iconSize(props.sizeType)}`}
 `

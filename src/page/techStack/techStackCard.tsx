@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import { Card, CardHeader, CardBody, Row, Col } from 'reactstrap';
 import { TechStackInner } from '../../data/TechStackInner';
 import "./tech.css";
+import TechStackItem from './techStackItem';
 
 interface Props {
     title: string,
@@ -10,7 +11,7 @@ interface Props {
 
 const TechStackCard: React.FC<Props> = ({title, cont}) => {
     return (
-        <Card className="text techcard">
+        <Card className="text techcard" style={{width: '100%'}}>
             <CardHeader className="lv3 cardheader">
                 {title}
             </CardHeader>
@@ -25,28 +26,14 @@ const TechStackCard: React.FC<Props> = ({title, cont}) => {
                                     v.cont.map(x => {
                                         return (
                                             <Col xs="6" md="4" lg="3" className="text-center">
-                                                <Row>
-                                                    <Col xs="2">
-                                                        <img
-                                                            alt="js"
-                                                            height="25px"
-                                                            src={process.env.PUBLIC_URL+x.img} />
-                                                    </Col>
-                                                    <Col xs="10" className="text-left">{x.name}</Col>
-                                                </Row>
+                                                <TechStackItem
+                                                    icon={x.img}
+                                                    name={x.name}
+                                                    desc={x.desc}
+                                                />
                                             </Col>)
                                     })
                                 }
-                            </Row>
-                            <Row>
-                                <Col xs="12">
-                                    {v.desc}
-                                    {
-                                        (function() {
-                                            if(v.desc.length > 0) return (<><br/>&nbsp;</>)
-                                        })()
-                                    }
-                                </Col>
                             </Row>
                         </Fragment>)
                     })

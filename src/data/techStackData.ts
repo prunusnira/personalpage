@@ -7,68 +7,25 @@ const techStackData: TechStackWrap[] = [
             {
                 title: "Frontend",
                 cont: [
-                    { img: "/img/about/js.png", name: "JavaScript" },
-                    { img: "/img/about/ts.png", name: "TypeScript" },
-                    { img: "/img/about/html.png", name: "HTML" },
-                    { img: "/img/about/css.png", name: "CSS" },
-                    { img: "/img/about/react.png", name: "ReactJS" },
-                    { img: "/img/about/bootstrap.png", name: "Bootstrap" },
-                    { img: "/img/about/jquery.png", name: "jQuery" }
-                ],
-                desc: ""
+                    { img: "/img/about/js.png", name: "JavaScript", desc: "ES6 문법 사용" },
+                    { img: "/img/about/ts.png", name: "TypeScript", desc: "최근 프로젝트 전반에 사용" },
+                    { img: "/img/about/html.png", name: "HTML", desc: "마크업을 사용한 화면 표시" },
+                    { img: "/img/about/css.png", name: "CSS", desc: "Flexbox 활용" },
+                    { img: "/img/about/react.png", name: "ReactJS", desc: "Class/Hook 사용, Mobx/Redux 상태관리" },
+                    { img: "/img/about/bootstrap.png", name: "Bootstrap", desc: "빠른 UI 구성을 위해 사용" },
+                    { img: "/img/about/styledcomp.png", name: "styled-components", desc: "자체적 UI 구성이 필요한 프로젝트에서 사용" }
+                ]
             },
             {
                 title: "Backend",
                 cont: [
-                    { img: "/img/about/java.png", name: "Java" },
-                    { img: "/img/about/kotlin.png", name: "Kotlin" },
-                    { img: "/img/about/spring.png", name: "Spring" },
-                    { img: "/img/about/aws.png", name: "AWS" },
-                    { img: "/img/about/nginx.png", name: "NGINX" },
-                    { img: "/img/about/letsencrypt.png", name: "CertBot" }
-                ],
-                desc: "* AWS는 S3, Lambda, CloudFront, API Gateway, Lightsail, DynamoDB를 개인 프로젝트에 사용해보았습니다"
-            },
-            {
-                title: "Usage Examples",
-                cont: [],
-                desc: `인증서 채팅봇 프론트엔드 개발(2020), 인증서 백업 서버 개발(2020),
-                            개인 웹 서비스 3종 개발 및 운영중(2016~)`
-            }
-        ]
-    },
-    {
-        title: "Android",
-        cont: [
-            {
-                title: "Language",
-                cont: [
-                    { img: "/img/about/java.png", name: "Java" },
-                    { img: "/img/about/kotlin.png", name: "Kotlin" }
-                ],
-                desc: ""
-            },
-            {
-                title: "Usage Examples",
-                cont: [],
-                desc: "웹 서비스용 앱 개발 (총 2종, 2020), 개인 앱 개발 및 PlayStore 게시(2011~)"
-            }
-        ]
-    },
-    {
-        title: "Unity3D",
-        cont: [
-            {
-                title: "Language",
-                cont: [
-                    { img: "/img/about/csharp.png", name: "C#" }
-                ],
-                desc: ""
-            },
-            {
-                title: "Usage Examples",
-                cont: [],
-                desc: "리듬게임(BMS구동기) 개발, AI 플랫폼을 활용한 게임 및 플러그인 개발"
+                    { img: "/img/about/java.png", name: "Java", desc: "Spring 개발 시 사용" },
+                    { img: "/img/about/kotlin.png", name: "Kotlin", desc: "Java 대신 사용, Java 대비 간결해진 문법, null safety" },
+                    { img: "/img/about/spring.png", name: "Spring", desc: "REST API, 웹 서비스 등 개발 경험" },
+                    { img: "/img/about/aws.png", name: "AWS", desc: "(개인프로젝트) S3, Lambda, CloudFront, API Gateway, Lightsail" },
+                    { img: "/img/about/nginx.png", name: "NGINX", desc: "쉬운 서버 구축, 프록시 활용" },
+                    { img: "/img/about/letsencrypt.png", name: "CertBot", desc: "무료로 SSL 구성 시 사용" }
+                ]
             }
         ]
     },
@@ -78,17 +35,34 @@ const techStackData: TechStackWrap[] = [
             {
                 title: "Tried",
                 cont: [
-                    { img: "/img/about/mysql.png", name: "MySQL" },
-                    { img: "/img/about/mariadb.png", name: "MariaDB" },
-                    { img: "/img/about/sqlite.png", name: "SQLite" },
-                    { img: "/img/about/postgresql.png", name: "PostgreSQL" },
-                ],
-                desc: ""
-            },
+                    { img: "/img/about/mysql.png", name: "MySQL", desc: "업무/개인 포함 가장 많이 사용한 RDB" },
+                    { img: "/img/about/mariadb.png", name: "MariaDB", desc: "업무/개인 포함 가장 많이 사용한 RDB" },
+                    { img: "/img/about/sqlite.png", name: "SQLite", desc: "안드로이드나 게임 등에서 간단한 DB를 위해 사용" },
+                    { img: "/img/about/postgresql.png", name: "PostgreSQL", desc: "업무에서 1회 사용 경험" },
+                ]
+            }
+        ]
+    },
+    {
+        title: "Android",
+        cont: [
             {
-                title: "Usage Examples",
-                cont: [],
-                desc: "DB를 사용하는 서비스 전반적으로 RDBMS를 사용"
+                title: "Language",
+                cont: [
+                    { img: "/img/about/java.png", name: "Java", desc: "학부때부터 써온 언어" },
+                    { img: "/img/about/kotlin.png", name: "Kotlin", desc: "사실 안드로이드 때문에 Kotlin을 처음 접함" }
+                ]
+            }
+        ]
+    },
+    {
+        title: "Unity3D",
+        cont: [
+            {
+                title: "Language",
+                cont: [
+                    { img: "/img/about/csharp.png", name: "C#", desc: "업무에서 처음 접한 후 개인 프로젝트에서도 계속 활용" }
+                ]
             }
         ]
     },
@@ -98,34 +72,30 @@ const techStackData: TechStackWrap[] = [
             {
                 title: "Version Management",
                 cont: [
-                    { img: "/img/about/github.png", name: "GitHub" },
-                    { img: "/img/about/gitlab.png", name: "GitLab" },
-                    { img: "/img/about/bitbucket.png", name: "BitBucket" }
-                ],
-                desc: ""
+                    { img: "/img/about/github.png", name: "GitHub", desc: "개인 프로젝트 관리" },
+                    { img: "/img/about/gitlab.png", name: "GitLab", desc: "업무에서 사용" },
+                    { img: "/img/about/bitbucket.png", name: "BitBucket", desc: "이전에 사용했으나 GitHub에 Private이 생긴 뒤 사용하지 않음" }
+                ]
             },
             {
                 title: "UML",
                 cont: [
-                    { img: "/img/about/ea.png", name: "Enterprise Architect" },
-                    { img: "/img/about/visualparadigm.png", name: "Visual Paradigm" },
-                    { img: "/img/about/staruml.png", name: "StarUML" }
-                ],
-                desc: ""
+                    { img: "/img/about/ea.png", name: "Enterprise Architect", desc: "대학원 연구실에서 사용한 UML 프로그램" },
+                    { img: "/img/about/visualparadigm.png", name: "Visual Paradigm", desc: "대학원 연구실에서 사용한 UML 프로그램 2" },
+                    { img: "/img/about/staruml.png", name: "StarUML", desc: "1은 무료지만 2는 유료인 UML 프로그램" }
+                ]
             },
             {
                 title: "Documentation",
                 cont: [
-                    { img: "/img/about/msoffice.png", name: "MS Office" }
-                ],
-                desc: "Word, PowerPoint, Excel"
+                    { img: "/img/about/msoffice.png", name: "MS Office", desc: "Word, PowerPoint, Excel 사용, Google Docs도 가능" }
+                ]
             },
             {
                 title: "Design",
                 cont: [
-                    { img: "/img/about/photoshop.png", name: "Photoshop" }
-                ],
-                desc: "기본적인 사용 레벨, 유튜브 썸네일 정도의 작업은 가능합니다"
+                    { img: "/img/about/photoshop.png", name: "Photoshop", desc: "기본적인 사용 레벨, 유튜브 썸네일 정도의 작업은 가능" }
+                ]
             }
         ]
     }

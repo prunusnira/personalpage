@@ -29,7 +29,7 @@ const TechStack = () => {
             <ItemRow className="paragraph">
                 <ReactWOW
                     key="profile3"
-                    animation="slideInLeft" delay='0.5s'>
+                    animation="slideInLeft">
                     <ItemCol className="text" size={10}>
                         <span className="lv3">
                             <FontAwesomeIcon icon={faAngleRight} />&nbsp;
@@ -39,18 +39,18 @@ const TechStack = () => {
                     </ItemCol>
                 </ReactWOW>
             </ItemRow>
-            <ItemRow className="paragraph">
-                {
-                    techStackData.map((d, i) => {
-                        return (
+            {
+                techStackData.map((d, i) => {
+                    return (
+                        <ItemRow className="paragraph">
                             <TechStackCard
                                 title={d.title}
                                 cont={d.cont}
                             />
-                        )
-                    })
-                }
-            </ItemRow>
+                        </ItemRow>
+                    )
+                })
+            }
         </Container>
     )
 }
