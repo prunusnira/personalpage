@@ -39,18 +39,19 @@ const TechStack = () => {
                     </ItemCol>
                 </ReactWOW>
             </ItemRow>
+            <ItemRow className="paragraph">
             {
                 techStackData.map((d, i) => {
                     return (
-                        <ItemRow className="paragraph">
+                        <ItemCol size={5} isFlatUnderLg={true} key={`tech${i}`}>
                             <TechStackCard
-                                title={d.title}
-                                cont={d.cont}
+                                data={d}
                             />
-                        </ItemRow>
+                        </ItemCol>
                     )
                 })
             }
+            </ItemRow>
         </Container>
     )
 }

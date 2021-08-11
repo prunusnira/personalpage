@@ -1,45 +1,76 @@
-import React, {Component, Fragment} from 'react';
-import { Card, CardHeader, CardBody, Row, Col } from 'reactstrap';
-import { TechStackInner } from '../../data/TechStackInner';
-import "./tech.css";
-import TechStackItem from './techStackItem';
+import React from 'react'
+import { TechStackWrap } from '../../data/TechStackWrap'
+import { BodyContent, BodyHeader, ItemRow } from '../../styled/styledCommon'
+import "./tech.css"
 
 interface Props {
-    title: string,
-    cont: TechStackInner[]
+    data: TechStackWrap,
 }
 
-const TechStackCard: React.FC<Props> = ({title, cont}) => {
+const TechStackCard: React.FC<Props> = ({data}) => {
     return (
-        <Card className="text techcard" style={{width: '100%'}}>
-            <CardHeader className="lv3 cardheader">
-                {title}
-            </CardHeader>
-            <CardBody className="cardbody">
+        <ItemRow className="text techcard"
+            style={{
+                width: '100%',
+                alignItems: 'stretch'
+            }}>
+            <BodyHeader className="lv4 cardheader">
+                {data.title}
+            </BodyHeader>
+            <BodyContent className="cardbody">
+                <ItemRow>
+                    <b>About</b>
+                </ItemRow>
+                <ItemRow>
+                    <ul>
+                    {
+                        data.text.map((x, i) => {
+                            return <li>{x}</li>
+                        })
+                    }
+                    </ul>
+                    
+                </ItemRow>
                 {
-                    cont.map(v => {
-                        return (
-                        <Fragment>
-                            <span className="lv4"><b>{v.title}</b></span><br/>
-                            <Row>
-                                {
-                                    v.cont.map(x => {
-                                        return (
-                                            <Col xs="6" md="4" lg="3" className="text-center">
-                                                <TechStackItem
-                                                    icon={x.img}
-                                                    name={x.name}
-                                                    desc={x.desc}
-                                                />
-                                            </Col>)
-                                    })
-                                }
-                            </Row>
-                        </Fragment>)
-                    })
+                    (function() {
+                        if(data.exp.length !== 0) {
+                            return (
+                                <>
+                                    <ItemRow>
+                                        <b>사용 경험</b>
+                                    </ItemRow>
+                                    <ItemRow>
+                                        <ul>
+                                        {
+                                            data.exp.map(p => {
+                                                return <li>{p}</li>
+                                            })
+                                        }
+                                        </ul>
+                                    </ItemRow>
+                                </>
+                            )
+                        }
+                    })()
                 }
-            </CardBody>
-        </Card>
+                {
+                    (function() {
+                        if(data.etc !== '') {
+                            return (
+                                <>
+                                    <ItemRow>
+                                        <b>기타</b>
+                                    </ItemRow>
+                                    <ItemRow>
+                                        {data.etc}
+                                    </ItemRow>
+                                </>
+                            )
+                        }
+                    })()
+                }
+            </BodyContent>
+        </ItemRow>
     )
 }
 

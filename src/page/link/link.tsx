@@ -28,8 +28,8 @@ const Link = () => {
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href="https://arincblossom.wordpress.com">
-                                    https://arincblossom.wordpress.com
+                                href="https://prunusnira.tistory.com">
+                                    https://prunusnira.tistory.com
                             </a>
                         </ItemRow>
                         <ItemRow className="linktext lv3">

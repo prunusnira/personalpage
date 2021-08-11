@@ -1,7 +1,7 @@
-import { TechStackInner } from "./TechStackInner";
-
 export type TechStackWrap = 
 {
     title: string,
-    cont: TechStackInner[]
-};
+    text: string[],
+    exp: string[],
+    etc: string,
+}

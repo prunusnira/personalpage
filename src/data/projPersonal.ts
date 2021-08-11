@@ -1,46 +1,5 @@
 const projPersonal = [
     {
-        icon: "/project/banpick/icon.png",
-        title: {
-            "ko":"트위치 밴/픽 앱",
-            "jp":"",
-            "en":"Twitch BanPicker"
-        },
-        simpledesc: {
-            "ko":"트위치 스트리머의 컨텐츠에 활용될 수 있는 LoL 스타일 밴/픽 앱",
-            "jp":"",
-            "en":""
-        },
-        platform: "Web",
-        tech: "ReactJS (TypeScript), JavaScript, Bootstrap, AWS S3, Jest, Redux",
-        period: "2020.11.09~2020.11.14 (5일 + 지속적으로 업데이트 진행 중)",
-        link: ["https://banpick.nira.one",
-                "https://github.com/prunusnira/twitch-banpicker",
-                "https://youtu.be/t37LvUoVcFc"],
-        content: {
-            "ko":`(링크3: 실제 사용 예시 영상)
-                <ul>
-                    <li>트위치 스트리머의 컨텐츠에 활용할 수 있는 LoL 스타일의 밴/픽 앱</li>
-                    <li>시청자는 웹 앱에서 지정한 명령어를 채팅으로 입력하여 스트리머와 소통하면서 앱을 사용할 수 있음</li>
-                    <li>Twitch API, WebSocket 등을 활용하여 만든 앱</li>
-                </ul>`,
-            "jp":``,
-            "en":``
-        },
-        dev: {
-            "ko":`<ol>
-                    <li>Twitch API로 채널 내 시청자들의 채팅 내용을 읽어 분석하고, 자체 명령어를 기반으로 동작을 수행</li>
-                    <li>AWS S3에 데이터를 올리고 CloudFront로 SSL을 지원하는 방식으로 배포</li>
-                    <li>저장이 필요한 데이터는 redux-persist를 사용</li>
-                </ol>`,
-            "jp":``,
-            "en":``
-        },
-        image: [
-            "/project/banpick/01.png", "/project/banpick/02.png"
-        ]
-    },
-    {
         icon: "/project/sin/icon.png",
         title: {
             "ko":"Skill Navigator",
@@ -53,7 +12,7 @@ const projPersonal = [
             "en":""
         },
         platform: "Web",
-        tech: "ReactJS (TypeScript), Spring Boot (Kotlin), MariaDB, nginx, etc",
+        tech: "ReactJS (TypeScript), Spring Boot (Kotlin), MariaDB, nginx, MobX, styled-components, etc",
         period: "2016.04~",
         link: ["https://sin.nira.one",
                 "https://github.com/prunusnira/gdinfo-react",
@@ -76,6 +35,13 @@ const projPersonal = [
                     <li>3세대: Spring Boot 2 (Backend) + ReactJS (Frontend): GCE -> EC2 -> Lightsail</li>
                     <li>4세대: Spring Boot 2 (Backend-AWS Lightsail) + ReactJS (Frontend-AWS S3)</li>
                 </ol>
+                내부 구조의 지속적인 개선
+                <ul>
+                    <li>Frontend는 JSP, Thymeleaf를 지나 React로 정착</li>
+                    <li>React로 바뀐 이후에도 Class Component로 시작하여 FC, Custom Hook, CSS-in-JS 적용 등 지속적인 변화가 있었음</li>
+                    <li>Backend는 Spring Framework에서 SpringBoot로 변경하여 사용 중</li>
+                    <li>향후 express.js 기반의 node.js 서버로 변경을 계획중</li>
+                </ul>
                 사용 구조
                 <ul>
                     <li>WebCrawler로 개인 기록을 수집하여 DB에 저장</li>
@@ -101,7 +67,7 @@ const projPersonal = [
             "en":""
         },
         platform: "Web, Android",
-        tech: "ReactJS (TypeScript), NodeJS (TypeScript), Android (Kotlin), AWS DynamoDB, AWS S3, AWS Lambda, etc",
+        tech: "ReactJS (TypeScript), NodeJS (TypeScript), Android (Kotlin), AWS DynamoDB, AWS S3, AWS Lambda, MobX, BootStrap, etc",
         period: "2018.07~",
         link: ["https://piu.nira.one",
                 "https://play.google.com/store/apps/details?id=one.nira.piu",
@@ -125,6 +91,11 @@ const projPersonal = [
                 <ul>
                     <li>ReactJS, TypeScript</li>
                 </ul>
+                내부 구조의 지속적인 개선
+                <ul>
+                    <li>Skill Navigator의 Frontend 부분이 Class에서 FC로의 이전 이후 동일한 방향성으로 개선이 이루어짐</li>
+                    <li>Backend는 DB를 불러오는 정도의 간단한 작업이라 처음부터 express.js로 제작하였고 이후 개선을 거쳐 AWS Lambda로 서버리스가 되었음</li>
+                </ul>
                 데이터
                 <ul>
                     <li>패턴 데이터는 DB에서 관리하지만 개인 기록을 저장하는 데이터는 urlencoded 된 내용을 CSV 파일로 제공</li>
@@ -136,6 +107,47 @@ const projPersonal = [
         },
         image: [
             "/project/piu/01.jpg", "/project/piu/02.png"
+        ]
+    },
+    {
+        icon: "/project/banpick/icon.png",
+        title: {
+            "ko":"트위치 밴픽 앱",
+            "jp":"",
+            "en":"Twitch BanPicker"
+        },
+        simpledesc: {
+            "ko":"트위치 스트리머의 컨텐츠에 활용될 수 있는 LoL 스타일 밴픽 앱",
+            "jp":"",
+            "en":""
+        },
+        platform: "Web",
+        tech: "ReactJS (TypeScript), JavaScript, Bootstrap, AWS S3, Jest, Redux",
+        period: "2020.11.09~2020.11.14 (5일 + 지속적으로 업데이트 진행 중)",
+        link: ["https://banpick.nira.one",
+                "https://github.com/prunusnira/twitch-banpicker",
+                "https://youtu.be/t37LvUoVcFc"],
+        content: {
+            "ko":`(링크3: 실제 사용 예시 영상)
+                <ul>
+                    <li>트위치 스트리머의 컨텐츠에 활용할 수 있는 LoL 밴픽 스타일의 웹 앱</li>
+                    <li>시청자는 웹 앱에서 지정한 명령어를 채팅으로 입력하여 스트리머와 소통하면서 앱을 사용할 수 있음</li>
+                    <li>Twitch API, WebSocket, WebWorker 등을 활용하여 제작</li>
+                </ul>`,
+            "jp":``,
+            "en":``
+        },
+        dev: {
+            "ko":`<ol>
+                    <li>Twitch API로 채널 내 시청자들의 채팅 내용을 읽어 분석하고, 자체 명령어를 기반으로 동작을 수행</li>
+                    <li>AWS S3에 데이터를 올리고 CloudFront로 SSL을 지원하는 방식으로 배포</li>
+                    <li>저장이 필요한 데이터는 redux-persist를 사용</li>
+                </ol>`,
+            "jp":``,
+            "en":``
+        },
+        image: [
+            "/project/banpick/01.png", "/project/banpick/02.png"
         ]
     },
     {
